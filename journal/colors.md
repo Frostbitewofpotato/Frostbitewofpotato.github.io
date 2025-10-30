@@ -1,12 +1,14 @@
 # Origional image
 
-! [megolavania starts playing] (Pov_sans.png)
+![megolavania starts playing](Pov_sans.png)
 
 # code
 
 the website you sent made it so I could only write on 4 pixles at a time and it was driving me up a wall, mking me grow hair just so I could pull it out again in frustration. So instead here is all the hex made through a guestimate of where it should all be, no promises on if its right or not because that webite made me want to eat a hat
 
 line by line since I made it big
+
+15 24 18
 
 ffffff ffffff ffffff ffffff ffffff ffffff ffffff ffffff 000000 000000 000000 000000 000000 000000 000000 ffffff ffffff ffffff ffffff ffffff ffffff
 
@@ -86,4 +88,4 @@ I am going to expload, I wrote all of that on 1 sitting
 
 as stated above, I wasnt able to get the one site working so instead you just get my reffrence image isntead. I just made the silly purple guy and I made him with a smaller color pallet... I think
 
-! [Asagiri Gen] (Pixle_Gen.jpg)
+![Asagiri Gen](Pixle_Gen.jpg)
