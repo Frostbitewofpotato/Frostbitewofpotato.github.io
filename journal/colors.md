@@ -1,6 +1,6 @@
 # Origional image
 
-image
+! [megolavania starts playing] (Pov_sans.png)
 
 # code
 
@@ -85,3 +85,5 @@ I am going to expload, I wrote all of that on 1 sitting
 # final image
 
 as stated above, I wasnt able to get the one site working so instead you just get my reffrence image isntead. I just made the silly purple guy and I made him with a smaller color pallet... I think
+
+! [Asagiri Gen] (Pixle_Gen.jpg)
