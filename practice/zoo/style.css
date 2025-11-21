@@ -1,0 +1,47 @@
+
+table, th, tr, td{
+	border: 1px solid black;
+	border-collapse: collapse;
+}
+body{
+	background-color: #a47864;
+}
+
+p, h2, h3, h4, h5, h6 {
+	animation: color-change 100s infinite;
+	}
+	@keyframes color-change {
+		0% {color: #edcab5; }
+		10% { color: #c47e5a; }
+		20% { color: #ffd662; }
+		30% { color: #67bcb3; }
+		40% { color: #83c5cd; }
+		50% { color: #4f84c4; }
+		60% { color: #646f9b; }
+		70% { color: #be9cc1; }
+		80% { color: #b18eaa; }
+		90% { color: #ce879f; }
+		100% { color: #edcab5 }
+	}
+
+#info{
+background-color: #4f7c74;
+}
+
+.highlight {
+	color: #d2e8e0
+}
+
+td {
+	color: #d2e8e0
+}
+
+#head {
+	color: #d2e8e0;
+	background-color: #4f7c74;
+}
+
+#animals {
+	text-decoration: underline;
+	text-decoration-style: wavy;
+}
