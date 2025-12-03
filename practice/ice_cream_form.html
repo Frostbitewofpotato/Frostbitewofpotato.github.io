@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>I scream, you scream, we all scream when you turn left at the crossroads</title>
+		<script src="../js/validate.js">
+		</script>
+	</head>
+	<body>
+		<img src="Text-Captcha.png" alt="captcha">
+		<form action="https://httpbin.org/post" method="post">
+
+				<input type="text" id="captchas" name="captcha">
+				<label for="captchas"> please type the text above</label><br>
+				
+			<input type="text" id="names"  name="name">
+			<label for="names"> please submit the name you wish to provide to the council</label><br>
+			are you ready to begin<br>
+			<input type="radio" id="yes1" name="begin">
+			<label for="yes1">yes<label><br>
+					<input type="radio" id="yes2" name="begin">
+					<label for="yes2"> yes</label><br>
+					what do you wish to contribute to the cause?<br>
+					<input type="checkbox" id="food" name="food">
+					<label for="food">sustinence</label><br>
+					<input type="checkbox" id="labor" name="labor">
+					<label for="labor">labor</label><br>
+					
+					<input type="checkbox" id="will" name="will">
+			<label for="will">your last will and testimate</label> <br>
+			<input type="checkbox" id="water" name="water">
+			<label for="water">the back side of water</label><br>
+			<label for="sacrifice">Please select your sacrifice</label> <br>
+			<select id="sacrifice" name="sacrifice">
+				<option value="0">please select an option</option>
+				<option value="1">blood</option>
+				<option value="2">Goat</option>
+				<option value="3">your first born child</option>
+				<option value="3">You are unable to bring a sacrifice due to external conditions</option>
+				<option value="4"> &#9797; &#9732; &#9928;The Entity  &#9736; &#10207; &#9941;</option>
+				<option value="5">other</option>
+			</select><br>
+
+
+			<input type="text" id="other" name="other">
+			<label for="other"> any other information you wish to say?</label>
+
+			
+			<button type="reset">submit</button>
+			<button type="submit">reset</button>
+
+		</form>
+	</body>
+</html>
