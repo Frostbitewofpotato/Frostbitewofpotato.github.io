@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>twee</title>
+<style>
+	body{
+		background-color: #a9c0cb;
+	}
+	#container{
+		position: relative;
+		background-color: #ffffff;
+		width: 600px;
+		height: 80vh;
+		margin: auto;
+	}
+	#twee{
+		width: 0px;
+		height: 0px;
+		border-bottom: 800px solid green;
+		border-left: 300px solid transparent;
+		border-right: 300px solid transparent;
+	}
+	#box{
+		width: 50px;
+		height: 50px;
+		position: absolute;
+		left: 420px;
+		top: 400px;
+		background-image: conic-gradient(#dd4124, #fee715, #4db560, #00a0b0, #9e2c6a, #dd4124);
+	}
+#cloud {
+    height: 180px; /* control the size */
+    aspect-ratio: 1.8;
+    --g: radial-gradient(50% 50%, #000 98%, #0000) no-repeat;
+    mask: var(--g) 100% 100%/30% 60%,var(--g) 70% 0/50% 100%,var(--g) 0 100%/36% 68%,var(--g) 27% 18%/26% 40%,linear-gradient(#000 0 0) bottom/67% 58% no-repeat;
+    background: #269af2;
+}
+</style>
+	</head> 
+	<body>
+		<h1>this is am twee</h1>
+		<div id="container">
+			<div id="twee">
+				<div id="box"></div>
+				<div id="cloud"></div>
+			</div>
+			
+		</div>
+	</body>
+</html>
