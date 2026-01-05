@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title> Behold, my child. Let the light calm your sole</title>
+<style>
+.grid {
+	display: grid;
+	height: 100vh;
+	grid:
+		'head head head' 1fr
+		'left main right' 2fr
+		'foot foot foot' 1fr
+		/100px 1fr 100px;
+}
+#header{
+	grid-area:head;
+	width: 100%;
+	Height: 100%;
+	background-color: #f3c12c;
+	color: #efefe8;
+	text-align: center;
+}
+#lefts{
+	grid-area: left;
+	background-image: linear-gradient( #f3c12c, #973a36);
+	color: #efefe8;
+	text-align: center;
+}
+#rights{
+	grid-area: right;
+	background-image: linear-gradient( #f3c12c, #973a36);
+	color: #efefe8;
+	text-align: center;
+}
+#bottem{
+	grid-area: foot;
+	background-color: #973a36;
+	color:#a6594c;
+	text-align: center;
+}
+#mid{
+	grid-area: main;
+}
+</style>
+	</head>
+	<body>
+	<div class="grid">
+		<div id="header">
+			<h1>Welcome my Child</h1>
+		</div>
+		<div id="lefts">
+			<h1> &#9728; </h1>
+			<h1> &#77951; </h1>
+			<h1> &#9729; </h1>
+		</div>
+		<div id="rights">
+			<h1> &#9728; </h1>
+			<h1> &#77951; <h1>
+			<h1> &#9729; </h1>
+		</div>
+		<div id="mid">
+			<p> heh </p>
+		</div>
+		<div id="bottem">
+		</div>
+	</div>
+	</body>
