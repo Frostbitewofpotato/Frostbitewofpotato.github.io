@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+	<Head>
+		<title>Canadavis</title>
+<style>
+canvas{ 
+	border: black 1px solid;
+}
+</style>
+	</head>
+	<body> 
+		<p> Canadavis </p>
+		<canvas id="canvas" width="800" height="800">
+		</canvas>
+		<script>
+			const canvas = document.getElementById("canvas");
+			const ctx = canvas.getContext("2d");
+			// draw a gween wecktangle
+			ctx.fillStyle = "#fbdb65";
+			ctx.fillRect(0,0,800,800);
+			ctx.fillStyle = "#4d9e9a";
+			ctx.fillRect(100,100,200,300);
+			ctx.fillStyle = "red";
+			ctx.strokeStyle = "#274e55";
+			ctx.lineWidth = 10;
+			ctx.fillRect(350,10,100,100);
+			ctx.fillStyle = "black";
+			ctx.beginPath();
+			ctx.arc(400,400,100,0,.97*Math.PI);
+			ctx.fill();
+			ctx.stroke();
+			ctx.fillStyle = "purple";
+			ctx.beginPath();
+			ctx.ellipse(400,600,300,100,,0,2*Math.PI);
+			ctx.fill();
+			ctx.beginPath();
+			ctx.moveTo(710,10);
+			ctx.lineTo(790,150);
+			ctx.lineTo(610,150);
+			ctx.lineTo(710,10);
+			ctx.stroke();
+			ctx.fill();
+
+		</script>
+	</body>
+</html>
