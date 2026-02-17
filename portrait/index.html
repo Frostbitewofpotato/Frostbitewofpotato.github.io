@@ -44,6 +44,22 @@ canvas{
 			ctx.lineTo(485,360);
 			ctx.stroke();
 			ctx.fill();
+			//outfit
+			ctx.fillStyle = "black";
+			ctx.beginPath();
+			ctx.rect(315,430,170,5);
+			ctx.stroke();
+			ctx.fill();
+			ctx.fillStyle = "#e2b051";
+			ctx.beginPath();
+			ctx.rect(315,435,170,10);
+			ctx.fill()
+			ctx.stroke();
+			ctx.fillStyle = "#f2f0eb";
+			ctx.beginPath();
+			ctx.rect(315,445,170,20);
+			ctx.fill();
+			ctx.stroke();
 			//shading
 			ctx.fillStyle = "#edaa86";
 			ctx.strokeStyle = "transperent";
@@ -51,6 +67,7 @@ canvas{
 			ctx.moveTo(310,360);
 			ctx.lineTo(320,270);
 			ctx.lineTo(460,350);
+			ctx.stroke();
 			ctx.arc(470,340,20,2*Math,.5*Math.PI);
 			ctx.lineTo(550,250);
 			ctx.arc(400,250,150,0,.3*Math.PI);
@@ -125,8 +142,11 @@ canvas{
 			ctx.ellipse(500,220,25,35,2.1*Math.PI,Math.PI,2.5*Math.PI);
 			ctx.stroke();
 			ctx.beginPath();
+			ctx.moveTo(515,235);
+			ctx.lineTo(500,220);
 			ctx.ellipse(500,220,20,30,2.1*Math.PI,1.5*Math.PI,2.5*Math.PI);
-			ctx.lineTo(500,230);
+			ctx.lineTo(490,230);
+			ctx.arc(495,242,13,1.5*Math.PI,2*Math.PI);
 			ctx.stroke();
 		</script>
 	</body>
