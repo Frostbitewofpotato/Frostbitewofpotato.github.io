@@ -88,9 +88,46 @@ canvas{
 			ctx.ellipse(375,195,25,20,0,.9*Math.PI,2.2*Math.PI);
 			ctx.fill();
 			ctx.stroke();
-			//iris... itk how to spell it
-
-			
+			//iris... idk how to spell it and pupils
+			ctx.fillStyle = "#73362a";
+			ctx.beginPath();
+			ctx.arc(303,199,9,0,2*Math.PI);
+			ctx.fill();
+			ctx.stroke();
+			ctx.beginPath();
+			ctx.arc(373,190,15,0,2*Math.PI);
+			ctx.fill();
+			ctx.stroke();
+			ctx.fillStyle = "#93592b";
+			ctx.beginPath();
+			ctx.arc(303,199,9,.9*Math.PI,1.9*Math.PI);
+			ctx.stroke();
+			ctx.fill();
+			ctx.beginPath();
+			ctx.arc(373,190,15,.9*Math.PI,1.9*Math.PI);
+			ctx.fill();
+			ctx.stroke();
+			ctx.fillStyle = "black";
+			ctx.beginPath();
+			ctx.arc(301,197,3,0,2*Math.PI);
+			ctx.fill();
+			ctx.stroke();
+			ctx.beginPath();
+			ctx.arc(370,186,6,0,2*Math.PI);
+			ctx.fill();
+			ctx.stroke();
+			//mouth
+			ctx.beginPath();
+			ctx.ellipse(315,230,15,10,0,.4*Math.PI,.6*Math.PI);
+			ctx.stroke();
+			//ear
+			ctx.beginPath();
+			ctx.ellipse(500,220,25,35,2.1*Math.PI,Math.PI,2.5*Math.PI);
+			ctx.stroke();
+			ctx.beginPath();
+			ctx.ellipse(500,220,20,30,2.1*Math.PI,1.5*Math.PI,2.5*Math.PI);
+			ctx.lineTo(500,230);
+			ctx.stroke();
 		</script>
 	</body>
 </html>
