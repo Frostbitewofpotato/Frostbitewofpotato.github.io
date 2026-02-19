@@ -1,0 +1,153 @@
+<!DOCTYPE>
+<html lang="en">
+	<head>
+		<title> yippie </title>
+<style>
+canvas{
+	border: black 1px solid;
+}
+</style>
+	</head>
+	<body>
+		<p>despite everything, its still you</p>
+		<canvas id="canvas" width="800" height="800">
+		</canvas>
+		<script>
+			const canvas = document.getElementById("canvas");
+			const ctx = canvas.getContext("2d");
+			//background
+			ctx.fillStyle = "#aad5db";
+			ctx.fillRect(0,0,800,800);
+			//head base
+			ctx.fillStyle = "#ffcda8"; //skin tone
+			//skin shading is #edaa86
+			ctx.strokeStyle = "black";
+			ctx.beginPath();
+			ctx.moveTo(400,200);
+			ctx.arc(400,200,100,Math.PI,2*Math.PI);
+			ctx.arc(400,250,150,1.5*Math.PI,.3*Math.PI);
+			ctx.lineTo(350,400);
+			ctx.lineTo(300,370);
+			ctx.lineTo(280,250);//add a curve to this line
+			ctx.lineTo(290,210);
+			ctx.lineTo(275,190);
+			ctx.lineTo(275,165);
+			ctx.lineTo(350,113);
+			ctx.stroke();
+			ctx.fill();
+			//neck
+			ctx.fillStyle = "#edaa86";
+			ctx.beginPath();
+			ctx.moveTo(310,360);
+			ctx.lineTo(315,430);
+			ctx.lineTo(485,430);
+			ctx.lineTo(485,360);
+			ctx.stroke();
+			ctx.fill();
+			//outfit
+			ctx.fillStyle = "black";
+			ctx.beginPath();
+			ctx.rect(315,430,170,5);
+			ctx.stroke();
+			ctx.fill();
+			ctx.fillStyle = "#e2b051";
+			ctx.beginPath();
+			ctx.rect(315,435,170,10);
+			ctx.fill()
+			ctx.stroke();
+			ctx.fillStyle = "#f2f0eb";
+			ctx.beginPath();
+			ctx.rect(315,445,170,20);
+			ctx.fill();
+			ctx.stroke();
+			//shading
+			ctx.fillStyle = "#edaa86";
+			ctx.strokeStyle = "transperent";
+			ctx.beginPath();
+			ctx.moveTo(310,360);
+			ctx.lineTo(320,270);
+			ctx.lineTo(460,350);
+			ctx.stroke();
+			ctx.arc(470,340,20,2*Math,.5*Math.PI);
+			ctx.lineTo(550,250);
+			ctx.arc(400,250,150,0,.3*Math.PI);
+			ctx.fill();
+			//neck shading
+			ctx.fillStyle = "#ffcda8";
+			ctx.beginPath();
+			ctx.moveTo(315,430);
+			ctx.lineTo(311,380);
+			ctx.stroke();
+			ctx.lineTo(350,360);
+			ctx.lineTo(360,430);
+			ctx.fill();
+			//nose shading
+			ctx.fillStyle = "#edaa86";
+			ctx.beginPath();
+			ctx.moveTo(310,220);
+			ctx.lineTo(320,210);
+			ctx.lineTo(335,215);
+			ctx.fill();
+			//nose lines
+			ctx.fillStyle = "ffcda8";
+			ctx.beginPath();
+			ctx.arc(315,215,5,.5*Math.PI,1.5*Math.PI);
+			ctx.moveTo(315,210);
+			ctx.lineTo(320,190);
+			ctx.stroke();
+			//eye outline
+			ctx.fillStyle = "white";
+			ctx.beginPath();
+			ctx.ellipse(303,200,15,10,1.9*Math.PI,.7*Math.PI,2.2*Math.PI);
+			ctx.stroke();
+			ctx.fill();
+			ctx.beginPath();
+			ctx.ellipse(375,195,25,20,0,.9*Math.PI,2.2*Math.PI);
+			ctx.fill();
+			ctx.stroke();
+			//iris... idk how to spell it and pupils
+			ctx.fillStyle = "#73362a";
+			ctx.beginPath();
+			ctx.arc(303,199,9,0,2*Math.PI);
+			ctx.fill();
+			ctx.stroke();
+			ctx.beginPath();
+			ctx.arc(373,190,15,0,2*Math.PI);
+			ctx.fill();
+			ctx.stroke();
+			ctx.fillStyle = "#93592b";
+			ctx.beginPath();
+			ctx.arc(303,199,9,.9*Math.PI,1.9*Math.PI);
+			ctx.stroke();
+			ctx.fill();
+			ctx.beginPath();
+			ctx.arc(373,190,15,.9*Math.PI,1.9*Math.PI);
+			ctx.fill();
+			ctx.stroke();
+			ctx.fillStyle = "black";
+			ctx.beginPath();
+			ctx.arc(301,197,3,0,2*Math.PI);
+			ctx.fill();
+			ctx.stroke();
+			ctx.beginPath();
+			ctx.arc(370,186,6,0,2*Math.PI);
+			ctx.fill();
+			ctx.stroke();
+			//mouth
+			ctx.beginPath();
+			ctx.ellipse(315,230,15,10,0,.4*Math.PI,.6*Math.PI);
+			ctx.stroke();
+			//ear
+			ctx.beginPath();
+			ctx.ellipse(500,220,25,35,2.1*Math.PI,Math.PI,2.5*Math.PI);
+			ctx.stroke();
+			ctx.beginPath();
+			ctx.moveTo(515,235);
+			ctx.lineTo(500,220);
+			ctx.ellipse(500,220,20,30,2.1*Math.PI,1.5*Math.PI,2.5*Math.PI);
+			ctx.lineTo(490,230);
+			ctx.arc(495,242,13,1.5*Math.PI,2*Math.PI);
+			ctx.stroke();
+		</script>
+	</body>
+</html>
