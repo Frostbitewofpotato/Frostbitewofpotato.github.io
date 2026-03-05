@@ -1,54 +1,29 @@
-# Chris Needs Coffee
+# The Stanley Parraples Recreation
 
 ## Setting
 
-This game takes place at the Arlington Career Center. I tried to f
-faithfully recreate it, with the exception of moving the 
-library to the first floor.
+The setting of this game takes place in an office building! There will NOT be a bucker
 
 ## Map
 
-```mermaid
-graph TD;
-    bus(((Bus)))-->Commons;
-    Library-->Commons;
-    Box-->Cafeteria;
-    Cafeteria-->Commons;
-    Commons-->Outside;
-    Outside-->Portable;
-    Portable-->rm511;
-    Portable-->Bathroom;
-```
+just ask me for the map, I am not recreating it
 
-The player starts on the bus, and then is directed into the Commons. T
-They can explore, but must eventually make their way to rm511.
+Slanely walked through the LEFT door
 
 ## Story
 
-When the user gets to rm511, they learn that the teacher is asleep.
-They must take the teacher's coffee mug to the library, get it 
-filled, and then bring it back to the teacher.
-
-The game starts 15 minutes before the morning class bell, and each
-move costs 1 minute. So this journey must be completed in 15 moves.
-Some moves (like reading a book in the library) cost extra time.
+The game only really has 3 characters (theres a few extra's, like mariella in the madness ending or stanley's wife in the apartment ending). those characters are The Narrator, Stanley, and you, the player. The game is based solely on if you and Stanley listen to the narrators instructions or disobey them. based on how and when you change the script, different endings will happen. There are, 5 main endings I would say. The Freedom ending, where Stanely follows every direction given from the narrator, the explosion ending, where Stanely follows everything exept for the final instruction, the Apartment ending, where Stanley dissobeys everything, the Powerfull and Cold feat endings, where stanley disobeys everything the narrator says but also falls to his death, and the broom closet ending, the broom closet ending is my favorite.
 
 ## Global Variables
 
-The most important variables are
-`haveCup` and `cupIsFull`, both
-booleans that track progress in the
-story. Depending on these two variables,
-some rooms will display different things. For example, if you walk into the
-library without the cup, it will prompt you to
-read. If you walk in with the cup, it will show
-the librarian filling the cup with coffee.
+buttons - if all 4 buttons are pressed it allows for the heaven ending
 
-I also have numeric variables called `day` and `minute` which keep track of 
-time. `minute` starts at 0 and counts up
-with each move.
+whiteboard - a random percent change at the start for the whiteboard ending to happen
 
-I have a little HUD map, and use a bunch of 
-boolean variables to control which
-rooms the player has discovered. A map is only displayed after the user
-visits it.
+different dioulouge - I can't spell diolouge... a percent change for the opening do have different diologue. 
+
+Baby button - if pressed 4000 times then you get the art ending
+
+code - if, at any point in the story, the player types "sv\_cheats 1" then they get the serious ending
+
+elevator - if the player goes up and down the elevator 3 times they get the celebrity/elavator ending
