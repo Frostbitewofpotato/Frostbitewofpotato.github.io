@@ -22,7 +22,7 @@ function percent(){
 function intro() {
     clear();
     print("\nThis is a story about a Man named Stanely. Stanely worked for a company in a big building where he was employee #427. Employee #427's job was simple: he sat at his desk in room 427 and he pushed buttons on a keyboard. Orders came to him through a monitor on his desk, teling him what buttons to push, how long to push them, and in what order. This is what Employee #427 did every day of every month of every year, and although others might have considered it soul rending, Stanely relished every moment that the orders came in, as though he had been made exactly for this job. And Stanely was happy.");
-    
+   percent();
     function processInput(input){
     	room427();    
     }
@@ -50,6 +50,15 @@ function room427() {
         }
     }
     waitForInput(processInput);
+}
+
+function cowardEnding() {
+	clear();
+	print("\nBut stanley simply couldn't handle the pressure. What if he had to make a descision? What if a crucial outcom fell under his responsibility? He had never been trained for that! No, this couldn't go any way exept badly." + "\nThe thing to do now'', stanely though to himself, '' is to wait. Nothinh eill hurt me. Nothing will break me... In here, I can be happy, forever... I will be happy" + "\nstanley waited. Hours passed. Then days. Had years gone by? He no longer had the ability to tell. But the one thing he knew for sure, beyond any doubt was that if he waited long enough, the answers would come. Eventually, some daay, they woudl arrive. Soon, very soon now, this will end. He will be spoken to. He will be told what to do. Now it's just a little bit closer. Now it's even closer. Here it comes." + "\n Ending 1, Coward Ending");
+	function ProcessInput(input){
+		intro();
+	}
+	waitForInput(ProcessInput);
 }
 
 function hallway() {
@@ -103,6 +112,32 @@ function blueHall() {
 		stayHere();
 		waitThenCall(hallway);
 	}
+	}
+	waitForInput(processInput);
+}
+function lockedDoor()[
+	clear();
+	print("\nThe door has been locked");
+	function processInput(input){
+		hallway();
+	}
+	waitForInput(processInput);
+}
+
+function explore{
+	clear();
+	print("\nNo matter how hard Stanley looked, he couldn't find a trace of his co-workers. Stanlet went around touching every little thing in the office. But it didn't make a single difference, nor did it advance the story in any way. Stanley clicked on literally every single doo in the office because he doesn't pick up well on cues from his environment.");
+	function processInput(input){
+		hallway();
+	}
+	waitForInput(processInput);
+}
+
+function whiteboard{
+	clear();
+	print("\n ending 2. Whiteboard ending!");
+	function processInput(input){
+		intro();
 	}
 	waitForInput(processInput);
 }
