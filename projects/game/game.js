@@ -4,6 +4,7 @@ let buttons = 0; //for the heavan ending
 let chance = 1; //for whiteboard and alt chat chances
 let babyButton = 0; //for the art ending
 let elevator = 0;
+let cheats = 0;
 
 function reset(){
 	intro();
@@ -35,23 +36,76 @@ function room427() {
         "\n\tHALLWAY" + "\n\tStay in office");
     
     function processInput(input){
-        if (input.toLowerCase() === "hallway" && chance =< 95) {
+        if (input.toLowerCase() === "hallway" && chance >= 95) {
             altHall();
-	}else if(input.toLowerCase() === "hallway" && chance =< 90) {
+	} else if(input.toLowerCase() === "hallway" && chance >= 90) {
 		blueHall();
-	}else if(input.toLowerCase() === "hallway"){
+	} else if(input.toLowerCase() === "hallway") {
 		hallway();
-	}else if(input.toLowerCase() === "stay in office"){
+	} else if(input.toLowerCase() === "stay in office") {
 		cowardEnding();
         } else {
             stayHere();
-            waitThenCall(locationB);
+            waitThenCall(room247);
         }
     }
     waitForInput(processInput);
 }
 
-//finally, make sure you customize this to tell it what should happen at the
+function hallway() {
+	clear();
+	print("\nAll of his co-workers were gone. what coult it mean? Stanley decided to go to the meeting room; perhaps he has simply missed a memo");
+	print("\nWhere do you want to go next?" + "\n\tcontinue" + "\n\troom 247" + "\n\tExplore");
+	function processInput() {
+	if(input.toLowerCase() === "continue") {
+		doors();
+	} else if(input.toLowerCase() === "room 247") {
+		lockedDoor();
+	} else if(input.toLowerCase() === "explore") {
+		explore();
+	} else {
+		stayHere();
+		waitThenCall(hallway);
+	}
+	}
+	waitForInput(processInput);
+}
+
+function altHall() {
+	clear();
+	print("\nAll of his co-workers were... wait, no, this isn't the right office, is it? Is this Stanely's office?");
+	print("\nWhere do you want to go next?" + "\n\tcontinue" + "\n\troom 247" + "\n\tExplore");
+	function processInput() {
+	if(input.toLowerCase() === "continue") {
+		doors();
+	} else if(input.toLowerCase() === "room 247") {
+		lockedDoor();
+	} else if(input.toLowerCase() === "explore") {
+		explore();
+	} else {
+		stayHere();
+		waitThenCall(hallway);
+	}
+	}
+	waitForInput(processInput);
+}
+function blueHall() {
+	clear();
+	print("\nWhere do you want to go next?" + "\n\tcontinue" + "\n\troom 247" + "\n\troom 246");
+	function processInput() {
+	if(input.toLowerCase() === "continue") {
+		doors();
+	} else if(input.toLowerCase() === "room 247") {
+		lockedDoor();
+	} else if(input.toLowerCase() === "room 246") {
+		Whiteboard();
+	} else {
+		stayHere();
+		waitThenCall(hallway);
+	}
+	}
+	waitForInput(processInput);
+}
 //very start. For this simple example, any input will bring you
 //to locationA
 function start(){
