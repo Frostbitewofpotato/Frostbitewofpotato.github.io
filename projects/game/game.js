@@ -93,7 +93,7 @@ function altHall() {
 		explore();
 	} else {
 		stayHere();
-		waitThenCall(hallway);
+		waitThenCall(altHall);
 	}
 	}
 	waitForInput(processInput);
@@ -107,15 +107,15 @@ function blueHall() {
 	} else if(input.toLowerCase() === "room 247") {
 		lockedDoor();
 	} else if(input.toLowerCase() === "room 246") {
-		Whiteboard();
+		whiteboard();
 	} else {
 		stayHere();
-		waitThenCall(hallway);
+		waitThenCall(blueHall);
 	}
 	}
 	waitForInput(processInput);
 }
-function lockedDoor()[
+function lockedDoor(){
 	clear();
 	print("\nThe door has been locked");
 	function processInput(input){
@@ -124,7 +124,7 @@ function lockedDoor()[
 	waitForInput(processInput);
 }
 
-function explore{
+function explore() {
 	clear();
 	print("\nNo matter how hard Stanley looked, he couldn't find a trace of his co-workers. Stanlet went around touching every little thing in the office. But it didn't make a single difference, nor did it advance the story in any way. Stanley clicked on literally every single doo in the office because he doesn't pick up well on cues from his environment.");
 	function processInput(input){
@@ -133,7 +133,7 @@ function explore{
 	waitForInput(processInput);
 }
 
-function whiteboard{
+function whiteboard() {
 	clear();
 	print("\n ending 2. Whiteboard ending!");
 	function processInput(input){
@@ -141,6 +141,24 @@ function whiteboard{
 	}
 	waitForInput(processInput);
 }
+
+function doors(){
+	clear();
+	print("\nWhen stanley came to a set of two open doors, he entered the door on his left.");
+	print("\n choose where to go:" + "\n\tleft door" + "\n\tright door");
+	function processInput() {
+		if(input.toLowerCase() === "left door") {
+			meetingRoom();
+		}else if(input.toLowerCase === "right door") {
+			employeeLounge();
+		} else {
+			stayHere();
+			waitThenCall(doors);
+		}
+	}
+			waitForInput(processInput);
+	}
+
 //very start. For this simple example, any input will bring you
 //to locationA
 function start(){
