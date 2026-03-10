@@ -360,6 +360,161 @@ function broomWait2() {
 	}
 	waitForInput(processInput);
 }
+
+function bossOffice() {
+	clear();
+	print("\nComing to a staircase, Stanley walked upstairs to his boss's office.");
+	print("\n\tupstairs" + "\n\tdownstairs");
+	function processInput(input) {
+		if(input.toLowerCase() === "upstairs"){
+			ActualBossOffice();
+		}else if(input.toLowerCase() === "downstairs") {
+			insanityStart();
+		}else{
+			stayHere();
+			waitThenCall(bossOffice);
+		}
+	}
+	waitForInput(processInput);
+}
+
+//insane ending
+function insanityStart() {
+	clear();
+	print("\nBut Stanely just couldn't do it. He considered the possibility of facing his boss, admitting he had left his post during work hours. He might be fired for that. And in such a competitive economy, why had he taken that risk? All because he believed everyone had vanished? His voss would think he was crazy.")
+	function processInput(input){
+		insanity2();
+	}
+	waitForInput(processInput);
+}
+function insanity2() {
+	clear();
+	print("\nAnd then something occured to Stanley. ''Maybe...'' he thought to himself. ''Maybe I am crazy... All of my coworkers blinking mysteriously out of existence in a single moment for no reason at all?'' None of it made any logical sense.");
+	function processInput(input) {
+		insanity3();
+	}
+	waitForInput(processInput);
+}
+function insanity3() {
+	clear();
+	print("\nAnd as Stanley pondered this, he began to make other strange ovservations. For example, why couldn't he see himself beyond written words? why couldn't he go back to previous rooms? And why was he not able to make any choices any more?");
+	function processInput(input) {
+		insanity4();
+	}
+	waitForInput(processInput);
+}
+function insanity4() {
+	clear();
+	print("\n''No''Stanley said to himself. ''This is all too strange, this can't be real.'' And at lasy, he came to the conclusion that had been on the tip of his tounge. He just hadn't found the words for it yet. ''I'm deaming!'' he yelled. ''This is all a dream!''");
+	function processinput(input) {
+		insanity5();
+	}
+	waitForInput(processinput);
+}
+function insanity5() {
+	clear();
+	print("\nWhat a relief Stanley felt to have finally found an answer, an explanation. His coworkers weren't actually gone, he wasn't going to lose his job, he wasn't crazy after all! And he though to himself: ''I suppose I'll wake up soon. I'll have to go back to my boring real life job pushing buttons, I may as well enjoy this while I'm still lucid");
+	function ProcessInput(input) {
+		insanity6();
+	}
+	waitForInput(ProcessInput);
+}
+function insanity6() {
+	clear();
+	print("\nSo he imagined himself flying, and began to gently float above the ground. Then he imagined himself soaring through space on a magical star field, and it too appeared! It was so much fun, and Stanely marveled that he had still not woken up. How was he remaining lucid?");
+	function processInput(input) {
+		insanity7();
+	}
+	waitForInput(processInput);
+}
+function insanity7() {
+	clear();
+	print("\nAnd then perhaps the strangest question of them all entered Stanley's head. Ohe he was amazed he hadn't asked himself sooner. ''Why is there a voice in my head dictating everything that I'm doing and thinking?''Now the voice was describing itself being considered by Stanley, who found it particularly strange. ''I'm dreaming about a voice describing me thinking about how it's describing my thoughts,'' he thought!");
+	function processInput(input) {
+		insanity8();
+	}
+	waitForInput(processInput);
+}
+function insanity8() {
+	clear();
+	print("\nAnd while he though it all very odd, and wondered if this voice spoke to all people in their dreams, the truth was that of course this was not a dream. How could it be? Was Stanley simply deceiving himself? Believing that if he's asleep he doesn't have to take responsibility for himself? Stanley is as awake right now as he's ever been in his life.");
+	function processInput(input) {
+		insanity9();
+	}
+	waitForInput(processInput);
+}
+function insanity9() {
+	clear();
+	print("\nNow hearing the voice speak these words was quite a chock to Stanley. After all, he knew for certain, beyond a doubt, that this was in fact a dream! Did the voice not see him float and make magical stars just a moment ago? How else would the voice explain all that?The voice was a part of himself too, surely, surely if he could just...");
+	function processInput(input) {
+		insanity10();
+	}
+	waitForInput(processInput);
+}
+function insanity10() {
+	clear();
+	print("\nHe would prove it. He would prove that he was in control, that this was a dream. So he closed his eyes gently, and invited himself to wake up. He felt the cool weight of the blanket on his skin, the press of the  mattress on his back, the fresh air of a world outside this one. ''let me kae up,'' he thought to himself. ''I'm done with this dream, I wish it to be over. let be go back to my job, let me continue pushing the buttons, please, it's all I want.''");
+	function processInput(input){
+		insanity11();
+	}
+	waitForInput(processInput);
+}
+function insanity11() {
+	clear();
+	print("\n''I want my apartment, and my wife, and my job. All I want is my life exactly the way it's always been. My life is normal, I am normal. Everything will be fine. I am okay.''");
+	function processInput(input){
+		insanity12();
+	}
+	waitForInput(processInput);
+}
+function insanity12() {
+	clear();
+	print("\n...");
+	function processInput(input){
+		insanity13();
+	}
+	waitForInput(processInput);
+}
+function insanity13() {
+	clear();
+	print("\nStanley began screaming. ''Please someone wake me up! My name is Stanley! I have a boss! I have an office! I am real! Please just someone tell me I'm real! I must be real! I must be! Can anyone hear my voice? Who am I? WHO AM I?!'' And Everything went black");
+	function processInput(input){
+		insanity14();
+	}
+	waitForInput(processInput);
+}
+function insanity14() {
+	clear();
+	print("This is the story of a woman named Mariella. Marialla woke up on a day like any other. She arose, got dressed, gathered her belongings, and walked to her place of work. But on this particular day, her walk was interrupted by the body of a man who had stumbled through town talking and screaming to himself and then collapsed dead on the sidewalk.")
+	function processInput(input){
+		insanity15();
+	}
+	waitForInput(processInput);
+}
+function insanity15() {
+	clear();
+	print("\nAnd although she would soon turn to go call for an ambulance for just a few, brief moments, she considered the strange man. He was obviously crazy; that much she knew. Everyone knows what crazy people look like. And in that moment, she thought to herself how lucky she was to be normal.");
+	function processInput(input){
+		insanity16();
+	}
+	waitForInput(processInput);
+}
+function insanity16() {
+	clear();
+	print("\nI am sane. I am in control of my mind. I know what is real, and what isn't. It was comforting to think this, and in  a certain way, seeing this man made her feel better. But then she remembered the meeting she had scheduled for that day. The very important people whose impressions of her would affect her career and, by extension, the rest of her life. She had no time for this, so it was only a moment that she stood there, staring down at the body. And then she turned and ran.")
+	function processInput(input){
+		insanityEnd();
+	}
+	waitForInput(processInput);
+}
+function insanityEnd() {
+	clear();
+	print("\nEnding 3, Insane Ending");
+	function processInput(input){
+		intro();
+	}
+	waitForInput(processInput);
+}
 //right door path
 
 //very start. For this simple example, any input will bring you
