@@ -3,11 +3,19 @@ let gameActive = true; //this variable is required.
 let buttons = 0; //for the heavan ending
 let chance = 1; //for whiteboard and alt chat chances
 let babyButton = 0; //for the art ending
-let elevator = 0;
-let cheats = 0;
+let elevator = 0; // for the elevator/press confrence ending
+let restarts = 0; //for any endings that change based on resets
 
 function reset(){
-	intro();
+	function processInput(input){
+		if(input.toLowerCase === "reset"){
+		intro();
+		}else{
+			stayHere();
+			waitForInput(processInput);
+		}
+	}
+	waitForInput(processInput);
 }//hopefully this works in all places exept the serious ending
 
 function percent(){
@@ -65,7 +73,7 @@ function hallway() {
 	clear();
 	print("\nAll of his co-workers were gone. what coult it mean? Stanley decided to go to the meeting room; perhaps he has simply missed a memo");
 	print("\nWhere do you want to go next?" + "\n\tcontinue" + "\n\troom 247" + "\n\tExplore");
-	function processInput() {
+	function processInput(input) {
 	if(input.toLowerCase() === "continue") {
 		doors();
 	} else if(input.toLowerCase() === "room 247") {
@@ -84,7 +92,7 @@ function altHall() {
 	clear();
 	print("\nAll of his co-workers were... wait, no, this isn't the right office, is it? Is this Stanely's office?");
 	print("\nWhere do you want to go next?" + "\n\tcontinue" + "\n\troom 247" + "\n\tExplore");
-	function processInput() {
+	function processInput(input) {
 	if(input.toLowerCase() === "continue") {
 		doors();
 	} else if(input.toLowerCase() === "room 247") {
@@ -101,7 +109,7 @@ function altHall() {
 function blueHall() {
 	clear();
 	print("\nWhere do you want to go next?" + "\n\tcontinue" + "\n\troom 247" + "\n\troom 246");
-	function processInput() {
+	function processInput(input) {
 	if(input.toLowerCase() === "continue") {
 		doors();
 	} else if(input.toLowerCase() === "room 247") {
@@ -146,7 +154,7 @@ function doors(){
 	clear();
 	print("\nWhen stanley came to a set of two open doors, he entered the door on his left.");
 	print("\n choose where to go:" + "\n\tleft door" + "\n\tright door");
-	function processInput() {
+	function processInput(input) {
 		if(input.toLowerCase() === "left door") {
 			meetingRoom();
 		}else if(input.toLowerCase === "right door") {
@@ -158,6 +166,201 @@ function doors(){
 	}
 			waitForInput(processInput);
 	}
+//left door path
+function meetingRoom() {
+	clear();
+	print("\nyet there was not a single person here either. Feeling a wave of dispelief, Stanley decided to go up to his boss's office hoping he might find an answer there.");
+	print("\nwhere do you want to go?" + "\n\tstairwell" + "\n\tbroom closet");
+	function processInput(input) {
+		if(input.toLowerCase() === "stairwell"){
+			bossOffice();
+		}else if(input.toLowerCase() === "broom closet"){
+			broomCloset(); //this is the wrong nae=me but it's in too many places to replace so just pretend it says stairwell
+		}else{
+			stayHere();
+			waitThenCall(meetingRoom);
+		}
+	}
+	waitForInput(processInput);
+}
+//oh, did you get the broom closet ending? the broom closet ending was my favorite!
+function broomCloset() {
+	clear();
+	if(restarts == 0){
+	print("\nStanlet stepped into the broom closet, but there was nothing here. So he turned around and got back on track.");
+	}else{
+		print("\noh, no. oh no, no, no, no, no, no, no, no, no, not again. I won't be a part of this. I'm not going to encourage you. I'm not going to say anything at all. I'm just going to be patient and wait for you to finish whatever it is you enjoy doing so much in this room. Please, take your time.");
+	}
+	print("\n\tleave" + "\n\tstay");
+	function processInput(input) {
+		if(input.toLowerCase() === "leave"){
+			bossOffice();
+		}else if(input.toLowerCase() === "stay"){
+			broomCloset2();
+		}else{
+			stayHere();
+			waitThenCall(broomCloset);
+		}
+	}
+	waitForInput(processInput);
+}
+
+function broomCloset2() {
+	clear();
+	print("\nThere was nothing here. No choice to make, not path to follow, just an empty broom closet. No reason to still br here.");
+	print("\n\tleave" + "\n\tstay");
+	function processInput(input) {
+		if(input.toLowerCase() === "leave"){
+			bossOffice();
+		}else if(input.toLowerCase() === "stay"){
+			broomCloset3();
+		}else{
+			stayHere();
+			waitThenCall(broomCloset2);
+		}
+	}
+	waitForInput(processInput);
+}
+function broomCloset3() {
+	clear();
+	print("\nIt was baffeling that Stanely was still just sitting in the broom closet. He wasn't even doing anything. At least if there was something to interact with he'd be justified in some way. As it isi, he's literally just standing there, doing sween nothing.");
+	print("\n\tleave" + "\n\tstay");
+	function processInput(input) {
+		if(input.toLowerCase() === "leave"){
+			bossOffice();
+		}else if(input.toLowerCase() === "stay"){
+			broomCloset4();
+		}else{
+			stayHere();
+			waitThenCall(broomCloset3);
+		}
+	}
+	waitForInput(processInput);
+}
+function broomCloset4() {
+	clear();
+	print("\nAre you... are you really still in the broom closet? Standing around doing nothing? Why? Please offer me some explanation here; I'm genuinely confused. You do realize there's no choice or anything in here, right? If I had said: ''Stanley wallked past the broom closet,'' at least you would have had a reason for exporing it to find out. But it didn't even occur to me because literally this closet is of absolutely no significance to the story whatsoever. I never would have thought to mention it. Maybe to you this is somehoe its own branching path. Maybe when you go talk about this to your freinds, you'll say: ''OH, DID U GET THE BROOM CLOSET ENDING? THE BROOM CLOSET ENDING WAS MY FAVORITE!1 XD'' ");
+	print("\nI hope your freinds find this concerning");
+	print("\n\tleave" + "\n\tstay");
+	function processInput(input) {
+		if(input.toLowerCase() === "leave"){
+			bossOffice();
+		}else if(input.toLowerCase() === "stay"){
+			broomCloset5();
+		}else{
+			stayHere();
+			waitThenCall(broomCloset4);
+		}
+	}
+	waitForInput(processInput);
+}
+function broomCloset5() {
+	clear();
+	print("\nStanlet was fat, and ugly, and really, realy stupid. He probably only got the job because of a family connection; that's how stupid he is. [I can't put the rest of this line in because then it slips into pg 13 and not just pg :( ]");
+	print("\n\tleave" + "\n\tstay");
+	function processInput(input) {
+		if(input.toLowerCase() === "leave"){
+			bossOffice();
+		}else if(input.toLowerCase() === "stay"){
+			broomCloset6();
+		}else{
+			stayHere();
+			waitThenCall(broomCloset5);
+		}
+	}
+	waitForInput(processInput);
+}
+function broomCloset6() {
+	clear();
+	print("\nWell, I've come to a very definite conclusion about what's going on right now. You're dead. You got tp this broom closet, exproted it a bit, and were just about to leave because there's nothing here when a physical malady of some sort shit down your central nervous system and you collapsed on the keyboard. Well, in a situation like this, the responsible thing is to alert someone nearby so as to ensure that your body is taken vare of before it begins to decompose.");
+	function processInput(input) {
+		broomCloset7();
+	}
+	waitForInput(processInput);
+}
+function broomCloset7() {
+	clear();
+	print("\nHELLO? ANYONE WHO HAPPENS TO BE NEARBY! THE PERSON AT THIS COMPUTER IS DEAD! THEY HAVE FALLEN PREY TO ANY NUMBER OF YOUR COUNTLESS HUMAN PHYSIOLOGICAL VUNERABILITIES. IT'S INDICATIVE OF THE LONG-TERM SUSTAINABILITY OF YOUR SPECIES! Please remove their corpse from the area and instruct another human to take their place making sure they understand basic text-based video game mechanics and filling them in on the history or narrative tropes in video gaming so that the irony and insightful commentary of this game is not lost on them.");
+	print("\Alreight, when you've done that, just step out into the hallway");
+	print("\n\tleave" + "\n\tstay");
+	function processInput(input) {
+		if(input.toLowerCase() === "leave"){
+			BroomHallway();
+		}else if(input.toLowerCase() === "stay"){
+			broomWait();
+		}else{
+			stayHere();
+			waitThenCall(broomCloset7);
+		}
+	}
+	waitForInput(processInput);
+}
+function broomWait() {
+	clear();
+	print("\n...");
+	print("\n\tleave" + "\n\tstay");
+	function processInput(input) {
+		if(input.toLowerCase() === "leave"){
+			BroomHallway();
+		}else if(input.toLowerCase() === "stay"){
+			broomWait();
+		}else{
+			stayHere();
+			waitThenCall(broomWait);
+		}
+	}
+	waitForInput(processInput);
+}
+function BroomHallway() {
+	clear();
+	print("\nAh, second player! It's good to have you on board. I guarantee you can't do any worse than the person who came before you.");
+	print("\n\tbroom closet" + "\n\tstairwell");
+	function processInput(input) {
+		if(input.toLowerCase() === "broom closet"){
+			broomCloset8();
+		}else if(input.toLowerCase() === "stairwell"){
+			bossOffice();
+		}else{
+			stayHere();
+			waitThenCall(broomHallway);
+		}
+	}
+	waitForInput(processInput);
+}
+function broomCloset8() {
+	clear();
+	print("\nYou too?! Unbelievable. I'm at the mercy of an entire species of invalids. Perhaps there;s a monkey nearby you can hand the controls to? A fish? Fungus? Look, you can hammer out the details; I'm not particularly picky. I'll just be waiting for when you're ready to pick up the story again.");
+	restarts += restarts;
+	print("\n\tleave" + "\n\tstay");
+	function processInput(input) {
+		if(input.toLowerCase() === "leave"){
+			bossOffice();
+		}else if(input.toLowerCase() === "stay"){
+			broomWait2();
+		}else{
+			stayHere();
+			waitThenCall(broomCloset8);
+		}
+	}
+	waitForInput(processInput);
+}
+function broomWait2() {
+	clear();
+	print("\n...");
+	print("\n\tleave" + "\n\tstay");
+	function processInput(input) {
+		if(input.toLowerCase() === "leave"){
+			bossOffice();
+		}else if(input.toLowerCase() === "stay"){
+			broomWait2();
+		}else{
+			stayHere();
+			waitThenCall(broomWait);
+		}
+	}
+	waitForInput(processInput);
+}
+//right door path
 
 //very start. For this simple example, any input will bring you
 //to locationA
@@ -169,3 +372,4 @@ function start(){
     }
     waitForInput(processInput);
 }
+reset();
