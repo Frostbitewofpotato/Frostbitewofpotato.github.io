@@ -207,7 +207,7 @@ function broomCloset() {
 
 function broomCloset2() {
 	clear();
-	print("\nThere was nothing here. No choice to make, not path to follow, just an empty broom closet. No reason to still br here.");
+	print("\nThere was nothing here. No choice to make, no path to follow, just an empty broom closet. No reason to still be here.");
 	print("\n\tleave" + "\n\tstay");
 	function processInput(input) {
 		if(input.toLowerCase() === "leave"){
@@ -223,7 +223,7 @@ function broomCloset2() {
 }
 function broomCloset3() {
 	clear();
-	print("\nIt was baffeling that Stanely was still just sitting in the broom closet. He wasn't even doing anything. At least if there was something to interact with he'd be justified in some way. As it isi, he's literally just standing there, doing sween nothing.");
+	print("\nIt was baffeling that Stanely was still just sitting in the broom closet. He wasn't even doing anything. At least if there was something to interact with he'd be justified in some way. As it is, he's literally just standing there, doing sween nothing.");
 	print("\n\tleave" + "\n\tstay");
 	function processInput(input) {
 		if(input.toLowerCase() === "leave"){
@@ -239,8 +239,8 @@ function broomCloset3() {
 }
 function broomCloset4() {
 	clear();
-	print("\nAre you... are you really still in the broom closet? Standing around doing nothing? Why? Please offer me some explanation here; I'm genuinely confused. You do realize there's no choice or anything in here, right? If I had said: ''Stanley wallked past the broom closet,'' at least you would have had a reason for exporing it to find out. But it didn't even occur to me because literally this closet is of absolutely no significance to the story whatsoever. I never would have thought to mention it. Maybe to you this is somehoe its own branching path. Maybe when you go talk about this to your freinds, you'll say: ''OH, DID U GET THE BROOM CLOSET ENDING? THE BROOM CLOSET ENDING WAS MY FAVORITE!1 XD'' ");
-	print("\nI hope your freinds find this concerning");
+	print("\nAre you... are you really still in the broom closet? Standing around doing nothing? Why? Please offer me some explanation here; I'm genuinely confused. You do realize there's no choice or anything in here, right? If I had said: ''Stanley wallked past the broom closet,'' at least you would have had a reason for exporing it to find out. But it didn't even occur to me because literally this closet is of absolutely no significance to the story whatsoever. I never would have thought to mention it. Maybe to you this is somehow its own branching path. Maybe when you go talk about this to your freinds, you'll say: ''OH, DID U GET THEB ROOM CLOSET ENDING? THE BROOM CLOSET ENDING WAS MY FAVORITE!1 XD'' ");
+	print("\nI hope your friends find this concerning");
 	print("\n\tleave" + "\n\tstay");
 	function processInput(input) {
 		if(input.toLowerCase() === "leave"){
@@ -256,7 +256,7 @@ function broomCloset4() {
 }
 function broomCloset5() {
 	clear();
-	print("\nStanlet was fat, and ugly, and really, realy stupid. He probably only got the job because of a family connection; that's how stupid he is. [I can't put the rest of this line in because then it slips into pg 13 and not just pg :( ]");
+	print("\nStanlet was fat, and ugly, and really, really stupid. He probably only got the job because of a family connection; that's how stupid he is. [I can't put the rest of this line in because then it slips into pg 13 and not just pg :( ]");
 	print("\n\tleave" + "\n\tstay");
 	function processInput(input) {
 		if(input.toLowerCase() === "leave"){
@@ -272,7 +272,7 @@ function broomCloset5() {
 }
 function broomCloset6() {
 	clear();
-	print("\nWell, I've come to a very definite conclusion about what's going on right now. You're dead. You got tp this broom closet, exproted it a bit, and were just about to leave because there's nothing here when a physical malady of some sort shit down your central nervous system and you collapsed on the keyboard. Well, in a situation like this, the responsible thing is to alert someone nearby so as to ensure that your body is taken vare of before it begins to decompose.");
+	print("\nWell, I've come to a very definite conclusion about what's going on right now. You're dead. You got to this broom closet, exploted it a bit, and were just about to leave because there's nothing here when a physical malady of some sort shut down your central nervous system and you collapsed on the keyboard. Well, in a situation like this, the responsible thing is to alert someone nearby so as to ensure that your body is taken care of before it begins to decompose.");
 	function processInput(input) {
 		broomCloset7();
 	}
@@ -281,7 +281,7 @@ function broomCloset6() {
 function broomCloset7() {
 	clear();
 	print("\nHELLO? ANYONE WHO HAPPENS TO BE NEARBY! THE PERSON AT THIS COMPUTER IS DEAD! THEY HAVE FALLEN PREY TO ANY NUMBER OF YOUR COUNTLESS HUMAN PHYSIOLOGICAL VUNERABILITIES. IT'S INDICATIVE OF THE LONG-TERM SUSTAINABILITY OF YOUR SPECIES! Please remove their corpse from the area and instruct another human to take their place making sure they understand basic text-based video game mechanics and filling them in on the history or narrative tropes in video gaming so that the irony and insightful commentary of this game is not lost on them.");
-	print("\Alreight, when you've done that, just step out into the hallway");
+	print("\Alright, when you've done that, just step out into the hallway");
 	print("\n\tleave" + "\n\tstay");
 	function processInput(input) {
 		if(input.toLowerCase() === "leave"){
@@ -329,7 +329,7 @@ function BroomHallway() {
 }
 function broomCloset8() {
 	clear();
-	print("\nYou too?! Unbelievable. I'm at the mercy of an entire species of invalids. Perhaps there;s a monkey nearby you can hand the controls to? A fish? Fungus? Look, you can hammer out the details; I'm not particularly picky. I'll just be waiting for when you're ready to pick up the story again.");
+	print("\nYou too?! Unbelievable. I'm at the mercy of an entire species of imbaciles. Perhaps there's a monkey nearby you can hand the controls to? A fish? Fungus? Look, you can hammer out the details, I'm not particularly picky. I'll just be waiting for when you're ready to pick up the story again.");
 	restarts += restarts;
 	print("\n\tleave" + "\n\tstay");
 	function processInput(input) {
