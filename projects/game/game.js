@@ -6,6 +6,7 @@ let babyButton = 0; //for the art ending
 let elevator = 0; // for the elevator/press confrence ending
 let restarts = 0; //for any endings that change based on resets
 let keypad = 0; //the communist manefesto (should probably add that at the end because that will take up a lot of space)
+let restart = 0; //yeah I need 2 of them... don't worry about it
 
 function reset(){
 	function processInput(input){
@@ -916,6 +917,40 @@ function freedomFinal(){
 	print("\nending 5, freedom ending");
 	function processInput(input){
 		intro();
+	}
+	waitForInput(processInput);
+}
+
+function CountdownEnding1(){
+	clear();
+	print("Oh Stanley, you didn't just activate the controls, did you? After they kept you elsaved all these years, you go and you try to take control of the machine for yourself, is that what you wanted? Control?");
+	function processInput(input){
+		countdownEnding2();
+	}
+	waitForInput(processInput);
+}
+function countdownEnding2(){
+	clear();
+	print("\nOh... Stanley. [sigh] I applaud your effort, I really do, but you need to understand; there's only so much that machine can do. You were supposed to let it go, turn the controls off, and leave.");
+	function processInput(input){
+		countdownEnding3();
+	}
+	waitForInput(processInput);
+}
+function countdownEnding3(){
+	clear();
+	print("\nIf you want to throw my story off track, you're gonna have to do much better than that. I'm afraid you don't have nearly the power yiu think you do; for example, and I believe you'll fund this pertinent:");
+	function processInput(input){
+		countdownEnding4();
+	}
+	waitForInput(processInput);
+}
+function countdownEnding4{
+	clear();
+	print("\nStanley suddenly realized that he had just initiated the network's emergency detonation system. In the event that this machine is activated without proper DNA identification, nuclear detonators are set to explode, eliminating the entire complex.");
+	print("\nHow ling until detonation, then? Hmm... let's say, um... two minutes");
+	function processInput(input){
+		countdownEnding5();
 	}
 	waitForInput(processInput);
 }
