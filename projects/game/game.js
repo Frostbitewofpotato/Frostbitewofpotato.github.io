@@ -32,6 +32,9 @@ function intro() {
     clear();
     print("\nThis is a story about a Man named Stanely. Stanely worked for a company in a big building where he was employee #427. Employee #427's job was simple: he sat at his desk in room 427 and he pushed buttons on a keyboard. Orders came to him through a monitor on his desk, teling him what buttons to push, how long to push them, and in what order. This is what Employee #427 did every day of every month of every year, and although others might have considered it soul rending, Stanely relished every moment that the orders came in, as though he had been made exactly for this job. And Stanely was happy.");
    percent();
+	elevator == 0;
+	keypad == 0;
+	babyButton == 0;
     function processInput(input){
     	room427();    
     }
@@ -331,7 +334,7 @@ function BroomHallway() {
 function broomCloset8() {
 	clear();
 	print("\nYou too?! Unbelievable. I'm at the mercy of an entire species of imbaciles. Perhaps there's a monkey nearby you can hand the controls to? A fish? Fungus? Look, you can hammer out the details, I'm not particularly picky. I'll just be waiting for when you're ready to pick up the story again.");
-	restarts += restarts;
+	restarts = restarts + 1;
 	print("\n\tleave" + "\n\tstay");
 	function processInput(input) {
 		if(input.toLowerCase() === "leave"){
@@ -612,7 +615,165 @@ function quotePost(){
 }
 function elavator(){
 	clear();
-	print("\nplaceholder");
+	if(elevator == 0){
+	print("\Decending deeper into the building, Stanley realized he felt a bit peculiar. It was a stirring of emotion in his chest as though he felt more free to think for himself, to question the nature of his job. Why did he feel this now, when for yeats it had never coourred in him? This question would not go unanswered for long.");
+	elevator = elevator + 1;
+	}else if(elevator == 1){
+		print("\nWhoops; nope, never mind! Stanley actually got back into the elevator and went back up! Silly me! Why did Stanley do that, when he knew that it would just lead back to his boss's office? Well, thats a great question, I just can't wait to find out.");
+	elevator = elevator + 1;
+	}else if(elevator == 2){
+		print("\nIncredible. Now he's getting back into the elevator and going down again? Ladies and gentlemen, how does he keep coming up with all of this?");
+elevator = elevator + 1;
+	}else if(elevator == 3){
+		print("\nDid you think he we were going to go forward down the spooky corridor? No! It's time to once again go back up in the elevator! I can't begin to grapple with what might be up there. Is it the boss's office again? Or what if it's the boss's office this time? The suspence is killing me!");
+elevator = elevator + 1;
+	}else{
+		print("\nOf course. Going back down the elevator. How did I not anticipate it? I mean, sure, now it's obvious. But you have to understand that thirty seconds ago, this kind of thing had never been attempted before. I had no frame of refrence to even anticipate it! That's just how revelattory Stanley's decision-making is. A breath of fresh air in a landscape of storytelling that has grown stale and repetitive.");
+		print("\nHmm... you know what? I just thought of something. Hold on, let's stop for a moment.");
+		print("\n\tcontinue");
+		elevator = elevator + 1;
+	}
+	if(elevator == 1 || elevator == 3){
+		print("\n\tcreapy hallway" + "\n\televator");
+	}else if(elevator == 2 || elevator == 4){
+		print("\n\tboss's office");
+	}else{
+	}
+	function processInput(input){
+		if(input.toLowerCase() === "creapy hallway"){
+			creapyHallway();
+		}else if(input.toLowerCase() === "elevator"){
+			elavator();
+		}else if(input.toLowerCase() === "boss's office" && elevator == 2){
+			elevatorBoss1();
+
+		}else if(input.toLowerCase() === "boss's office" && elevator == 4){
+			elevatorBoss2();
+		}else if(input.toLowerCase() === "continue" && elevator >= 5){
+			pressConfrence1();
+		}else{
+			stayHere();
+			waitTheCall(elavator);
+		}
+	}
+	waitForInput(processInput);
+
+}
+function elevatorBoss1(){
+	clear();
+	print("\nHere we are Stanley, it's your boss's office! Exactly the way it was before you got onto the elevator. It's still just exactly what it is. What a decision you've made to come up here and look at the office again. This has fleshed out the plot of the story in new and fascinating ways I could have never anticipated. It's that keen eye for storytelling that you have, an incisive rapid fire of critical plot points, one after another, weaving a rich tapestry of uncompromising narrative! Wow! [chuckles] I'm bolted to the edge of my seat!");
+	print("\n\televator");
+	function processInput(input){
+		if(input.toLowerCase() === "elevator"){
+			elavator();
+		}else{
+			stayHere();
+			waitThenCall(elevatorBoss1);
+		}
+	}
+	waitForInput(processInput);
+}
+function elevatorBoss2(){
+	clear();
+	print("\nOh my gosh... it's the boss's office. [sigh] This absolutely changes everything for me. Give me a time out here while I process this.");
+	function processInput(input){
+		elevatorBoss3();
+	}
+	waitForInput(processInput);
+}
+function elevatorBoss3(){
+	clear();
+	print("\n...");
+	function processInput(input){
+		elevatorBoss4();
+	}
+	waitForInput(processInput);
+}
+function elevatorBoss4(){
+	clear();
+	print("\nOk. I'm ready. I'm prepared to embrace this stunning revelation, and to move forward with- No! No wait! No, I need more time to process.");
+	function processInput(input){
+		elevatorBoss5();
+	}
+	waitForInput(processInput);
+}
+function elevatorBoss5(){
+	clear();
+	print("\n...");
+	function processInput(input){
+		elevatorBoss6();
+	}
+	waitForInput(processInput);
+}
+function elevatorBoss6() {
+	clear();
+	print("\nAlright, I have fully come to terms with it. I have made space in my worldview for this astonishing new reality. As before, I turn to your expert eye for gripping narrative, Master Stanley.");
+	print("\n\televator");
+	function processInput(input){
+		if(input.toLowerCase() === "elevator"){
+			elavator();
+		}else{
+			stayHere();
+			waitThenCall(elevatorBoss6);
+		}
+	}
+	waitForInput(processInput);
+}
+function pressConfrence1(){
+	clear();
+	print("\nDon't you realize? It's the anticipation, Stanley. You and I, we have no way of knowing what will be at the top of this elevator. But the suspence! The agony of waiting, and anticipating, and having to guess! That's the real thrill! Oh, I simply don't want to let that feeling go! It's so precious, so fleeting! Why don't we take this elevator ride nice and slow?");
+	function processInput(input){
+		pressConfrence2();
+	}
+	waitForInput(processInput);
+}
+function pressConfrence2(){
+	clear();
+	print("\nThere we go. Isn't this so much more exiting? You know Stanley, it seems like nowadays the only thing that audiences want is to be shocked as loudly and frequently as possible. They want big explosive moments flung right in their faces from the very moment that things get started. But where's the tension? Where's the trust in the audience to build a slow and nuanced appreciation for the story, the characters? Why aren't we given time to imagine the surprises? To have to think and to anticipate, and then to marvel at the eventual reveal?");
+	function processInput(input){
+		pressConfrence3();
+	}
+	waitForInput(processInput);
+}
+function pressConfrence3(){
+	clear();
+	print("\nThis is storytelling, Stanley! What you and I are doing right now, this is the most exiting narrative to be developed in years! And it's really all because of you! You're the one who took this bold step of revisiting the exact same lovations over and over. Truly, I mean it. This is unique and different. It's not like anything else out there. You see, I want stories that surprise me, Stanley! I want to have a think. I want to be engaged, and not pandered to. We're being fed such unimaginative drivel all the time, and we all know it. Which is why we're so starved for content that makes us feel sharp and vital and alive!");
+	function processInput(input){
+		pressConfrence5();
+	}
+	waitForInput(processInput);
+}
+function pressConfrence5(){
+	clear();
+	print("\nThat's why people like you so much, Stanley! Because you're not afraid to spit in the face of tradition. You're a role model, you know? People look up to you. Which is why- Oh, I didn't know when to spring this on you but, well, I've gathered a little press conference for you, so that you can talk about your work and your storytelling and your life. Yes, I know you're not much for the public eye, but I thought it would especially mean a lot to the people who have been following you from the beginning. They really look up to you, Stanley! I don't know if you realise the impact you have on them. This is the kind of gesture that might leave a tremendous impact on them for the better.");
+	function processInput(input){
+		pressConfrence6();
+	}
+	waitForInput(processInput);
+}
+function pressConfrence6() {
+	clear();
+	print("\nOh good, We're here. Okay, the room where we're holding the press confrence should be just around the corner here somewhere. Ah yes, here it is. Just through this door. Alright. Are you ready? I've told them you're going to speak a little bit about the nature of surprise in storytelling, and what it means to craft a truly unpredictable narrative. Oh don't worry! You'll do great! Just be yourself and speak from the heart! I- I'm really proud of you, Stanley.");
+	function processInput(input){
+		pressConfrence7();
+	}
+	waitForInput(processInput);
+}
+function pressConfrence7(){
+	clear();
+	print("\nOkay, it looks like they're ready for you. Go get 'em!");
+	function processInput(input){
+		pressConfrenceEnd();
+	}
+	waitForInput(processInput);
+}
+function pressConfrenceEnd(){
+	clear();
+	print("\nEnding 4, Press Confrence / Elevator Ending");
+	function processInput(input){
+		intro();
+	}
+	waitForInput(processInput);
 }
 //right door path
 
