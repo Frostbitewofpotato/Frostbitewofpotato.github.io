@@ -5,6 +5,7 @@ let chance = 1; //for whiteboard and alt chat chances
 let babyButton = 0; //for the art ending
 let elevator = 0; // for the elevator/press confrence ending
 let restarts = 0; //for any endings that change based on resets
+let keypad = 0; //the communist manefesto (should probably add that at the end because that will take up a lot of space)
 
 function reset(){
 	function processInput(input){
@@ -515,13 +516,112 @@ function insanityEnd() {
 	}
 	waitForInput(processInput);
 }
+//boss's office
+function ActualBossOffice() {
+	clear();
+	print("\nStepping into his manager's office, Stanley was once again stunned to discover not an indication of any human life. Shocked, unraveled, Stanley wondered in disbelief who orchestrated this. What dark secret was being held from him?");
+	print("\nchoose a place to investigate" + "\n\tBoss's desk" + "\n\tFireplace" + "\n\twait for the narrator to stop yapping");
+	function processInput(input){
+		if(input.toLowerCase() === "boss's desk"){
+			keycard();
+		}else if(input.toLowerCase() === "fireplace" || input.toLowerCase() === "wait for the narrator to stop yapping"){
+			bossContinue();
+		}else{
+			stayHere();
+			waitForInput(ActualBossOffice);
+		}
+	}
+	waitForInput(processInput);
+}
+function keycard(){
+	clear();
+	print("\n[please enter pin number]")
+	function processInput(input){
+		if(input.toLowerCase() === "2845" && keypad == 0){
+			tooFast();
+		}else if(input.toLowerCase() !== "2845" && keypad == 0){
+			bossContinue();
+		}else if(input.toLowerCase() === "2845" && keypad >= 1){
+			elavator();//spelled differently than the varrable
+		}else if(input.toLowerCase() !== "2845" && keypad >= 1){
+			incorrectCode1();
+		}else{
+			stayHere();
+			waitForInput(keycard);
+		}
+	}
+
+waitForInput(processInput);
+}
+function bossContinue() {
+	clear();
+	print("\nWhat he could not have known was that the keypad behind the boss's desk guarded the terrible truth that his boss had been keeping from him. And so the boss had assigned it an extra secret pin number: 2845");
+	print("\nBut, of course, Stanley couldn't possibly have known this");
+	print("\n\tWait here" + "\n\tBoss's desk");
+	keypad = keypad +1;
+	function processInput(input){
+		if(input.toLowerCase() === "wait here"){
+			incorrectCode1();
+		}else if(input.toLowerCase() === "boss's desk"){
+			keycard();
+		}else{
+			stayHere();
+			waitThenCall(bossContinue);
+		}
+	}
+	waitForInput(processInput);
+}
+function incorrectCode1(){
+	clear();
+	print("\nStanley just sat around twiddling his thumbs. Trying to input anything on the device was useless sincd he could never know the combination was: 2845.");
+	print("\n2845");
+	print("\nFor god - but it turns out that the panel's emergrncy override kicked in and the door just opened all by itself and Stanley got the heck along with the story - wekk whoop-de-doo!");
+	function processInput(input){
+		elavator();
+	}
+	waitForInput(processInput);
+}
+
+function tooFast() {
+	clear();
+	print("\nStanley was in such a rush to get through the story as quickly as possible, he didn't even have a single minute to just let the narrator talk. That kind of anxiety isn't healthy, so he just relaxed for a few moments with some calming insparational quotes:");
+	function processInput(input){
+		insparationalQuotes();
+	}
+	waitForInput(processInput);
+}
+function insparationalQuotes(){
+	clear();
+	print("\n''I have not allowed rejection to move me.'' -Cicely Tyson");
+	print("\n''If my mind can conceive it, if my heart can believe it, then I can achive it.'' -Muhammad Ali");
+	print("\n''Where there's hope, there's life. It fills us with fresh courage and makes us strong again.'' -Anne Frank");
+	print("\n''try to be a RAINBOW in someone else's cloud'' -Maya Angelou");
+	print("\n''To succeed in life, you need three things: a wishbone, a backbone, and a funny bone.'' Reba McEntire");
+	function processInput(input){
+		quotePost();
+	}
+	waitForInput(processInput);
+}
+function quotePost(){
+	clear();
+	print("\nFeeling soothed and rejuvenated, Stanley calmly walked forward into the open passageway.");
+	function processInput(input){
+		elavator();
+	}
+	waitForInput(processInput);
+}
+function elavator(){
+	clear();
+	print("\nplaceholder");
+}
 //right door path
 
 //very start. For this simple example, any input will bring you
 //to locationA
 function start(){
     print("Welcome to a recreation of The Stanely Parrables! Press any key to start. you can reset the game at any time by typing reset.");
-
+	print("\nSome endings are missing, like the escape pod ending becuase I can't program that in, or the museumn ending because I didn't want to. Also, some diologue has been changed to fit the format, like in the insane ending.");
+	print("\nall copywrite goes to CrowsCrowsCrows and I am in no way trying to claim any of this work as mine, I'm just making this for a web page assignment");
     function processInput(input){
             intro();
     }
