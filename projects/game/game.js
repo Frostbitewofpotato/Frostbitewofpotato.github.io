@@ -775,6 +775,150 @@ function pressConfrenceEnd(){
 	}
 	waitForInput(processInput);
 }
+function creapyHallway(){
+	clear();
+	print("\nStanley walked straight ahead through the large door that read: 'Mind Control Facility'");
+	function processInput(input){
+		tvRoom();
+	}
+	waitForInput(processInput);
+}
+function tvRoom(){
+	clear();
+	print("\nThe lights rose on an enormous room packed with television screens. ''What horrible secrets did this place hold?'' Stanley thought to himself. Did he have the strength to find out?");
+	function processInput(input){
+		cameraRoom();
+	}
+	waitForInput(processInput);
+}
+function cameraRoom(){
+	clear();
+	print("\nNow the monitors jumped to life, their true nature revealed. Each bore the number of an employee in the building  - Stanley's co-workers. The lives of so many individials reduced to images on a screen, and Stanley one of them, eternally monitored in this place where freedom meant nothing.");
+	function processInput(input){
+		tvElevator();
+	}
+	waitForInput(processInput);
+}
+function tvElevator(){
+	clear();
+	print("\nThe Mind Control Facility... it was too horrible to believe. It couldn't be true. Has Stanley really been under someone's control all this time? Was this the only reason he was happy with his boring job? That his emotions had been manipulated to accept it blindly?");
+	function processInput(input){
+		tvUpElevator();
+	}
+	waitForInput(processInput);
+}
+function tvUpElevator(){
+	clear();
+	print("\nNo! He refused to believe it. He couldn't accept it. His own life in someone else's control? Never! It was unthinkable, wasn't it? Was it even possible? Had he truly spent his entire life utterly blind to the world?");
+	function processInput(input){
+		leaveElevator();
+	}
+	waitForInput(processInput);
+}
+function leaveElevator(){
+	clear();
+	print("\nBut here was the proof. The heart of the operation. Controls labeled with emotions: happy, or sad, or content. Walkting, eating, working; all of it monitored and commanded from this very place. And as the cold reality of his pasy began to sinnk in, Stanley decided that this machinery would never again exert its terrible power over another human life. For he would dismantle the controls once and for all. And when at lasy he found the source of the room's power, he knew it was his duty, his obligation, to put an end to this horrible place and to everything it stood for.");
+	function processInput(input){
+		TheFinalChoice();
+	}
+	waitForInput(processInput);
+}
+function TheFinalChoice(){
+	clear();
+	print("\nDevice power");
+	print("\nOn     Off");
+	function processInput(input){
+		if(input.toLowerCase() === "on"){
+			FreedomEnding1();
+		}else if(input.toLowerCase() === "off"){
+			CountdownEnding1();
+		}else{
+			StayHere();
+			waitThenCall(TheFinalChoice);
+		}
+	}
+	waitForInput(processInput);
+}
+function FreedomEnding1(){
+	clear();
+	print("\n ...");
+	function processInput(input){
+		freedomEnding2();
+	}
+	waitForInput(processInput);
+}
+function freedomEnding2(){
+	clear();
+	print("\n Blackness. and a rising chill of uncertainty...");
+	function processInput(input){
+		freedomEnding3();
+	}
+	waitForInput(processInput);
+}
+function freedomEnding3(){
+	clear();
+	print("\nWas it over?");
+	function processInput(input){
+		freedomEnding4();
+	}
+	waitForInput(processInput);
+}
+function freedomEnding4(){
+	clear();
+	print("\nYes! He had won. He had defeared the machine, unshackled himself from someone else's command. Freedom was mere moments away!");
+	function processInput(input){
+		freedomEnding5();
+	}
+	waitForInput(processInput);
+}
+function freedomEnding5(){
+	clear();
+	print("\nAnd, yet, even as the immense foor slowly opened. Stanley reflected on how many puzzles still lay unsolved. Where had his co-workers gone? How had he been freed from the machine's grasp? What other mysteries did this strange building hold?");
+	function processInput(input){
+		freedomEnding6();
+	}
+	waitForInput(processInput);
+}
+function freedomEnding6(){
+	clear();
+	print("\nBut as sunlight streamed into the chamber, he realized none of this mattered to him. For it was not knowledge, or even power, that he had been seeking, but happiness.");
+	function processInput(input){
+		freedomEnding7();
+	}
+	waitForInput(processInput);
+}
+function freedomEnding7() {
+	clear();
+	print("\nPerhas his goal had not been to understand, but to let go. No longer would anyone tell him where to go, what to do, or how to feel. Whatever life he lives, it will be his. And that was all he needed to know. Ti was, perhaps, the only thing worth knowing.");
+	function processInput(input){
+		freedomEnding8();
+	}
+	waitForInput(processInput);
+}
+function freedomEnding8() {
+	clear();
+	print("\nStanley stepped through the open door. Stanley felt the cool breeze upon his skin, the feeling of liberation, the immense possibility of the new path before him. This was exactly the way, right now, that things were ment to happen.");
+	function processInput(input){
+		freedomEnding9();
+	}
+	waitForInput(processInput);
+}
+function freedomEnding9(){
+	clear();
+	print("\nAnd Stanley was happy.");
+	function processInput(input){
+		freedomFinal();
+	}
+	waitForInput(processInput);
+}
+function freedomFinal(){
+	clear();
+	print("\nending 5, freedom ending");
+	function processInput(input){
+		intro();
+	}
+	waitForInput(processInput);
+}
 //right door path
 
 //very start. For this simple example, any input will bring you
