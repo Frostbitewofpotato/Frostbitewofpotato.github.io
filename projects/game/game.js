@@ -47,7 +47,9 @@ function room427() {
     print("\nAnd then one day, something very peculiar happened, something that would forever change Stanley, something he would never quite forget. He had been at his deskk for nearly an hour, when he realized that not one, single order had arrived on the monitor for him to follow. No one had shown up to give him instructions, call a meeting, or even say hi. Never in all his years at the company had this happened, this complete isolation. Something was very clearly wrong. Shocked, frozen solid, Stanley found himself unable to  move for the longest time, but as he came to his wits and regained his senses, he got up from his desk and STEPPED OUT OF HIS OFFICE ");
     print("\nWhere do you want to go next? Say one of these choices:" +
         "\n\tHALLWAY" + "\n\tStay in office");
-    
+    babyButton == 0;
+	elevator == 0;
+	keypad == 0;
     function processInput(input){
         if (input.toLowerCase() === "hallway" && chance >= 95) {
             altHall();
@@ -945,12 +947,161 @@ function countdownEnding3(){
 	}
 	waitForInput(processInput);
 }
-function countdownEnding4{
+function countdownEnding4(){
 	clear();
 	print("\nStanley suddenly realized that he had just initiated the network's emergency detonation system. In the event that this machine is activated without proper DNA identification, nuclear detonators are set to explode, eliminating the entire complex.");
-	print("\nHow ling until detonation, then? Hmm... let's say, um... two minutes");
+	print("\nHow long until detonation, then? Hmm... let's say, um... two minutes");
 	function processInput(input){
 		countdownEnding5();
+	}
+	waitForInput(processInput);
+}
+function countdownEnding5() {
+	clear();
+	print("\nAh, now this is making things a little more fun, isn't it, Stanley? It's your time to shine! You are the star! It's your story now; shape it to your heart's desires. Ooh, this is much better than what I had in mind! What a shame we have so little time left to enjoy it.");
+	function processInput(input){
+		countdownEnding6();
+	}
+	waitForInput(processInput);
+}
+function countdownEnding6(){
+	clear();
+	print("\nMere moments until the bomb goes off, but what precious moments each one of them is! More time to talk about you, about me, where we're going, what this all means... I barely know where to start!");
+	function processInput(input){
+		countdownEnding7();
+	}
+	waitForInput(processInput);
+}
+function countdownEnding7(){
+	clear();
+	print("\nWhat's that? You'd like to know where your co-workers are? A moment of solace before you're obliterated? Alright. I'm in a good mood. You're going to die anyway. I'll tell you exactly what happened to them: I erased them. I turned off the machine; I set you free.");
+	function processInput(input){
+		countdownEnding8();
+	}
+	waitForInput(processInput);
+}
+function countdownEnding8(){
+	clear();
+	print("\nOf course, that was merely in this instance of the story. Sometimes when I tell it, I simply let you sit there in your office forever, pushing buttons endlessly and then dying alone. Other times, I let the office sink into the ground, swallowing everyone inside; or I let it burn to a crisp.");
+	function processInput(input){
+		countdownEnding9();
+	}
+	waitForInput(processInput);
+}
+function countdownEnding9(){
+	clear();
+	print("\nI have to say this, though, this version of events has been rather amusing. Watching you try to make sense of everything and take back the control wrestled away from you... it's quite rich. I almost hate to see it go! But I'm sure whatever I come up with on the nect go around will be even better.");
+	function processInput(input){
+		countdownEnding10();
+	}
+	waitForInput(processInput);
+}
+function countdownEnding10(){
+	clear();
+	print("\nMy goodness! Only 34 seconds left... but I'm enjoying this so much! You know what? To hell with it. I'm going to put some extra time on the clock; why not! These are precious additional seconds, Stanley. Time doesn't grow on trees!");
+	function processInput(input){
+		countdownEnding11();
+	}
+	waitForInput(processInput);
+}
+function countdownEnding11(){
+	clear();
+	print("\nOh, dear me, what's the matter, Stanley? Is it that you have no idea where you are going or what you're supposed to be doing right now? Or did you just assume that when I told you about that timer, there would be some choice or secret phrase to be able to turn it off?");
+	function processInput(input){
+		countdownEnding12();
+	}
+	waitForInput(processInput);
+}
+function countdownEnding12(){
+	clear();
+	print("\nI mean, look at you, sitting their reading this text. Or no, maybe you're desperatly trying to find some, secret little code to type in to fix all of this? Maybe it's 2845 again! Or no, it's the name of one of the removed endings! Maybe its the time! Or the Bucket! Everything! Anything! Something will save me!");
+	function processInput(input){
+		countdownEnding13();
+	}
+	waitForInput(processInput);
+}
+function countdownEnding13(){
+	clear();
+	print("\nWhy would you think that, Stanley? That this video game can be beaten, won, solved? Do you have any idea what your purpose in this place is? Hahaha, heh, Stanley... you're in for quite a disappointment.");
+	function processInput(input){
+		if(restart == 0){
+			firstCountdown1();
+		}else{
+			replayCountdown1();
+		}
+	}
+	waitForInput(processInput);
+}
+function firstCountdown1(){
+	clear();
+	print("\nBut here's a spoiler for you: that timer isn't a catalyst to keep the action moving along. It's just seconds ticking away to your death. You're only still plating instead of reading a novel because I want to watch you for evert moment that you're powerless, to see you made humble");
+	function processInput(input){
+		firstCountdown2();
+	}
+	waitForInput(processInput);
+}
+function firstCountdown2(){
+	clear();
+	print("\nThis is not a challenge. It's a tragedy. You wanted to control this world; that's fine. But I'm going to destroy it first, so you can't. ");
+	function processInput(input){
+		countdownEnding14();
+	}
+	waitForInput(processInput);
+}
+function replayCountdown1() {
+	clear();
+	print("\nBut you really believe there's an answer! How many times will you replay this bit, looking desperately for a solution? Ten? A hundred? A thousand? I look forward to finding out, and to watching the bomb go off each time you fail. just you and me and the retching explosion of fire and metal over and over and over for all eternity.");
+	function processInput(input){
+		replayCountdown2();
+	}
+	waitForInput(processInput);
+}
+function replayCountdown2(){
+	clear();
+	print("\nAnd Stanley died again.");
+	function processInput(input){
+		replayCountdown3();
+	}
+	waitForInput(processInput);
+}
+function replayCountdown3(){
+	clear();
+	print("\nAnd Stanley died again.");
+	function processInput(input){
+		replayCountdown4();
+	}
+	waitForInput(processInput);
+}
+function replayCountdown4(){
+	clear();
+	print("\nAnd Stanley died again.");
+	function processInput(input){
+		countdownEnding14();
+	}
+	waitForInput(processInput);
+}
+function countdownEnding14(){
+	clear();
+	print("\nTake a look at the clock, Stanley. That's 30 seconds you have left to struggle. Thirty seconds until a bog boom, and then nothing. No ending here, just you being blown to pieces. Will you cling desperately to your frail life, or will you let it go peacefully?");
+	function processInput(input){
+		countdownEnding15();
+	}
+	waitForInput(processInput);
+}
+function countdownEnding15() {
+	clear();
+	restart == restart + 1
+	print("\nAnother choice. Make it count. Or don't. It's all the same to me. All a part of the joke. And believe me, I will be laughing at every secong of your inevitable life, from the moment we fade in until the moment I say: happily Ever Af-");
+	function processInput(input){
+		countdownFinal();
+	}
+	waitForInput(processInput);
+}
+function countdownFinal(){
+	clear();
+	print("ending 6, Countdown Ending");
+	function processInput(input){
+		intro();
 	}
 	waitForInput(processInput);
 }
