@@ -1163,6 +1163,63 @@ function employeeLounge(){
 	}
 	waitForInput(processInput);
 }
+function rightHallway(){
+	clear();
+	print("\nBut eager yo get back to buisness, Stanley took the first open door on his left.");
+	print("\n\tdoor on the left" + "\n\tcontinue to the warehouse");
+	function processInput(input){
+		if(input.toLowerCase() === "door on the left"){
+			maintenceRoom();
+		}else if(input.toLowerCase() === "continue to the warehouse"){
+			warehouse();
+		}else{
+			stayHere();
+			waitThenCall(rightHallway);
+		}
+	}
+	waitForInput(processInput);
+}
+function maintenceRoom(){
+	clear();
+	print("\nAnd so he detoured through the maintenance section, walked straight ahead to the opposite door, and got back on track.");
+	function processInput(input){
+		bossOffice();
+	}
+	waitForInput(processInput);
+}
+function warehouse() {
+	clear();
+	print("\nStanley was so bad at following directions, it's incredible he wasn't fired years ago.");
+	print("\n\tCargo lift" + "\n\tJump");
+	function processInput(input){
+		if(input.toLowerCase() === "cargo lift"){
+			cargoLift();
+		}else if(input.toLowerCase() === "jump"){
+			powerfulEnding();
+		}else{
+			stayHere();
+			waitThenCall(warehouse);
+		}
+	}
+	waitForInput(processInput);
+}
+function powerfulEnding() {
+	clear();
+	print("\nBut in his eagerness to prove that he is in control of the story and no one gets to tell him what to do, Stanley leapt from te platform and plunged to his death");
+	print("\nGood job Stanley. Everyone thinks you are very powerful.");
+	function processInput(input){
+		powerfulFinal();
+	}
+	waitForInput(processInput);
+}
+function powerfulFinal(){
+	clear();
+	print("\nending 7, powerful ending");
+	function processInput(input){
+		intro();
+	}
+	waitForInput(processInput);
+}
 //very start. For this simple example, any input will bring you
 //to locationA
 function start(){
