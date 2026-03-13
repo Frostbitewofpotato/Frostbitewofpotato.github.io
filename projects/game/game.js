@@ -7,6 +7,7 @@ let elevator = 0; // for the elevator/press confrence ending
 let restarts = 0; //for any endings that change based on resets
 let keypad = 0; //the communist manefesto (should probably add that at the end because that will take up a lot of space)
 let restart = 0; //yeah I need 2 of them... don't worry about it
+let lounge = 0; //for waiting in the employee lounge diouloge
 
 function reset(){
 	function processInput(input){
@@ -50,6 +51,7 @@ function room427() {
     babyButton == 0;
 	elevator == 0;
 	keypad == 0;
+	lounge == 0;
     function processInput(input){
         if (input.toLowerCase() === "hallway" && chance >= 95) {
             altHall();
@@ -164,8 +166,8 @@ function doors(){
 	function processInput(input) {
 		if(input.toLowerCase() === "left door") {
 			meetingRoom();
-		}else if(input.toLowerCase === "right door") {
-			employeeLounge();
+		}else if(input.toLowerCase() === "right door") {
+			rightDoor();
 		} else {
 			stayHere();
 			waitThenCall(doors);
@@ -1106,7 +1108,61 @@ function countdownFinal(){
 	waitForInput(processInput);
 }
 //right door path
-
+function rightDoor(){
+	clear();
+	print("\nThis was not the correct way to the meeting rooom, and Stanley knew it perfectly well. Perhaps he wanted to stop by the emplotee lounge first, just to admire it.");
+	print("\n\tEmployee Lounge");
+	function processInput(input){
+		if(input.toLowerCase() === "employee lounge"){
+			employeeLounge();
+		}else{
+			stayHere();
+			waitThenCall(rightDoor);
+		}
+	}
+		waitForInput(processInput);
+	}
+function employeeLounge(){
+	clear();
+	if(lounge == 0 && chance == 100){
+		print("\nAnd here it was, the lounge. ''What a room,'' Stanley thought to himself. ''What a room, what a room, what a room.'' This is what Stanley thought: ''What a room! What a room, what a room! What a room! Va va voom. What a room.''");
+	}else if(lounge == 0 && chance == 99){
+		print("\nStanley felt light-headed, butterflies in his stomach, giddy in a way he had never known before. Was it this room? A connection between the two? Could a man love a room? I mean... truly... truly... deepply... madly... love?");
+	}else if(lounge == 0 && chance == 98){
+		print("\nThe lounge was grand, majestic... perhaps too majestic. Like a combination of a much smaller version and a much larger version of this ecaxt room. It all made Stanley uncomfortable, and he started to bleed a little. This made him smile. At last, proof that he was human");
+	}else if(lounge == 0 && chance == 97){
+		print("\nStanding now in this incredible room, Stanley, for the first time, understood true happiness. Then the feeling went away and he felt sad again. Then it came back, and lingered for a minute or two. Now it's only half there; just a kind of, um, tingle.");
+	}else if(lounge == 0 && chance == 96){
+		print("\nThe lounge was sublime, a work of art. What was it about this room that called so deeply and so personally to Stanley? Its grace? Its subtle charm? No, Stanley knew... it was something deeper. Something... darker.");
+	}else if(lounge == 0 && chance == 95){
+		print("\nWow, yes, this room. What a beautiful room. What a gorgeous, gorgeous room. Thank goodness Stanley had taken this detour on his way to the meeting room. Life without having experienced this room was now too horrible even to consider.");
+	}else if(lounge == 0 && chance == 94){
+		print("\nIt was fine.");
+	}else if(lounge == 0){
+		print("\nAh, yes. Truely a room worth admiring. It had really been worth the detour after all, just to spend a few moments here in this immaculate, beautifully-constructed room. Stanley simply stood here, drinking it all in.");
+	}else if(lounge == 1){
+		print("\nYes! Really, really worth it being here in the room. A room so utterly captivating that, even though all your co-workers have mysteriously vanished, here you sit looking at these chairs and some paintings. Really worth it.");
+	}else if(lounge == 2){
+		print("\nAt this point, Stanley's obsession with this room bordered on creapy and reflected poorly on his overall personality. It's possible that this is why everyone left.");
+	}else if(lounge == 3){
+		print("\nStanley sat around waiting for more dialogue. But when a long time had passed and there was no more he decided that the game was trying to send him a message.");
+	}else{
+		print("\n...");
+	}
+	print("\n\tHallway" + "\n\tWait here");
+	function processInput(input){
+		if(input.toLowerCase() === "hallway"){
+			rightHallway();
+		}else if(input.toLowerCase() === "wait here"){
+			lounge = lounge + 1;
+			employeeLounge();
+		}else{
+			stayHere();
+			waitThenCall(employeeLounge);
+		}
+	}
+	waitForInput(processInput);
+}
 //very start. For this simple example, any input will bring you
 //to locationA
 function start(){
