@@ -1220,6 +1220,304 @@ function powerfulFinal(){
 	}
 	waitForInput(processInput);
 }
+function cargoLift(){
+	clear();
+	print("\nLook, Stanley, I think perhaps we've gotten off on the wrong fot here. I'm not your enemy, really, I'm not. I realize that investing your trust into someone else can be difficult but the fact is that the story has been about nothing but you all this time.");
+	print("\n\tstay on cargo lift" + "\n\tjump");
+	function processInput(input){
+		if(input.toLowerCase() === "stay on cargo lift"){
+			cargoLift2();
+		}else if(input.toLowerCase() === "jump"){
+			catWalk();
+		}else{
+			stayHere();
+			waitThenCall(cargoLift);
+		}
+	}
+		waitForInput(processInput);
+}
+function cargoLift2() {
+	clear();
+	print("\nThere's someone you've been neglecting, Stanley. Someone you'be forgotten about. Please, stop tring to make every descision by yourself. Now, I'm not asking for me; I'm asking for her.");
+	function processInput(input){
+		upperWarehouse();
+	}
+	waitForInput(processInput);
+}
+function upperWarehouse() {
+	clear();
+	print("\nThis is it, Stanley. Yout chance to redeem yourself. To put your work aside, to let her back into your life. She's been waiting.");
+	print("\n\tContinue");
+	function processInput(input){
+		if(input.toLowerCase() === "continue"){
+			phoneRoom();
+		}else{
+			stayHere();
+			waitThenCall(upperWarehouse);
+		}
+	}
+	waitForInput(processInput);
+}
+function phoneRoom(){
+	clear();
+	print("\n*phone rings*");
+	print("\nThats her, Stanley. You need to be the one to do this. To reach out to her. If you can truly place your faith in anoother, then pick up the phone.");
+	print("\n\tpick up the phone" + "\n\tUnplug the phone");
+	function processInput(input){
+		if(input.toLowerCase() === "pick up the phone"){
+			apartmentEnding1();
+		}else if(input.toLowerCase() === "unplug the phone"){
+			choiceEnding1();
+		}else{
+			stayHere();
+			waitThenCall(phoneRoom);
+		}
+	}
+	waitForInput(processInput);
+}
+function apartmentEnding1(){
+	clear();
+	print("\nStanley's Wife:");
+	print("\nOh, Stanley, is that you? Hold on, sweetie, sorry to keep you waiting. I'm just pulling the bread out of the oven. Alright! Ok, there we go! Alright, now. I want you to come in and tell me all about your day aw work.");
+	print("\n\topen the door to your apartment");
+	function processInput(input){
+		if(input.toLowerCase() === "open the door to your apartment"){
+			apartmentEnding2();
+		}else{
+			stayHere();
+			waitThenCall(apartmentEnding1);
+		}
+	}
+	waitForInput(processInput);
+}
+function apartmentEnding2(){
+	clear();
+	print("\nNarrator:");
+	print("\nHAHAHHAHAHA! Gotcha! Oh, come on. Did you actually think you had a loving wife, who'd want to commit their life to you? I'm trying to make a point here, Stanlet. I'm trying to get you to see something.");
+	print("\n\tGo into your apartment" + "\n\tRun away");
+	function processInput(input){
+		if(input.toLowerCase() === "go into your apartment"){
+			apartmentEnding3();
+		}else if(input.toLowerCase() === "run away"){
+			falseRun();
+		}else{
+			stayHere();
+			waitThenCall(apartmentEnding2);
+		}
+	}
+	waitForInput(processInput);
+}
+function falseRun(){
+	clear();
+	print("\nSorry, but you're in my story now.");
+	print("\n\tgo into your apartment");
+	function processInput(input){
+		if(input.toLowerCase() === "go into your apartment"){
+			apartmentEnding3();
+		}else{
+			stayHere();
+			waitThenCall(falseRun);
+		}
+	}
+	waitForInput(processInput);
+}
+
+function apartmentEnding3(){
+	clear();
+	print("\nThis is a very sad story about the death of a man named Stanley.");
+	print("\n\t[GOOD MORNING EMPLOYEE 247. PLEASE PRESSS S ON YOUR KEYBOARD");
+	function processInput(input){
+		clear();
+		if(input.toLowerCase() === "s"){
+			apartmentEnding4();
+		}else{
+			stayHere();
+			waitThenCall(apartmentEnding3);
+		}
+	}
+	waitForInput(processInput);
+}
+function apartmentEnding4(){
+	clear();
+	print("\nStanley is quite a boring fellow. He has a job that demands nothing of him, and every button that he pushes is a reminder og the inconsequential nature of his existence.");
+	print("\n\tPLEASE PRESS 'N'");
+	function processInput(input){
+		if(input.toLowerCase() === "n"){
+			apartmentEnding5();
+		}else{
+			stayHere();
+			waitThenCall(apartmentEnding4);
+		}
+	}
+	waitForInput(processInput);
+}
+function apartmentEnding5(){
+	clear();
+	print("\nLook at him, there. Pushing buttons. Doing exactly what he's told to do. Now, he's pushing a button. Now, he's eating lunch. Now, he's going home. Now, he's coming back to work. One might even feel sorry for him, exept that he's chosen this life.");
+	print("\n\tPLEASE PRESS 'L'");
+	function processInput(input){
+		if(input.toLowerCase() === "l"){
+			apartmentEnding6();
+		}else{
+			stayHere();
+			waitThenCall(apartmentEnding5);
+		}
+	}
+	waitForInput(processInput);
+}
+function apartmentEnding6(){
+	clear();
+	print("\nBut in his mind, ah! In his mind, he can go on fantastic adventers. From behinf his desk, Stanley dreamed of wild expeditions into the unknown. Fansastic Discoveries of new lands. It was wonderful. And each day that he returned to work was a reminder that none of it would happen to him.");
+	print("\n\tPLEASE PRESS 'E' TO WATCH TV.");
+	function processInput(input){
+		if(input.toLowerCase() === "e"){
+			apartmentEnding7();
+		}else{
+			stayHere();
+			waitThenCall(apartmentEnding6);
+		} 
+	}
+	waitForInput(processInput);
+}
+function apartmentEnding7(){
+	clear();
+	print("And so he began to fantasize about his own job. First, he imagined that one day while at work, he stepped up from his desk to realize that all of his co-workers, his boss, everyone in that building had suddenly vanished off the face of the Earth. The thought exited him terribly.");
+	print("\n\tPLEASE PRESS 'T' TO SPEND TIME WITH THE BOYS");
+	function processInput(input){
+		if(input.toLowerCase() === "t"){
+			apartmentEnding8();
+		}else{
+			stayHere();
+			waitThenCall(apartmentEnding7);
+		}
+	}
+	waitForInput(processInput);
+}
+function apartmentEnding8(){
+	clear();
+	print("\nSo, he went further. He imagined he came to two open doors and that he could go through either. At last, choice! It never even mattered what lay behind each door. The mere thought that his descisions would mean something was almost too wonderful to behold.");
+	print("\n\tPLEASE PRESS 'R' TO PREPARE DINNER");
+	function processInput(input){
+		if(input.toLowerCase() === "r"){
+			apartmentEnding9();
+		}else{
+			stayHere();
+			waitThenCall(apartmentEnding9);
+		}
+	}
+	waitForInput(processInput);
+}
+function apartmentEnding9(){
+	clear();
+	print("\nAs he wandered through this fantasy world, he began to fill it with many possible paths and destinations. Down one pathway laid an enormous round room with monitors and mind controls, and down another was a yellow line that weaved in many directions, and down another was a game with a baby. And he called it: The Stanley Parable.");
+	print("\n\tPLEASE PRESS 'J' TO TELL YOUR KIDS A STORY.");
+	function processInput(input){
+		if(input.toLowerCase() === "j"){
+			apartmentEnding10();
+	}else{
+		stayHere();
+		waitThenCall(apartmentEnding9);
+	}
+	}
+	waitForInput(processInput);
+}
+function apartmentEnding10(){
+	clear();
+	print("\nIt was such a wonderful fantasy. And so in his head he relived it again, and then again, and again, overer and over, wishing beyond hope that it would never end. That he might always feel this free. Surely there's an answer down some new path, musn't there be? Perhaps if he played just one more time.");
+	print("\n\tPLEASE PRESS 'B' TO TELL YOUR WIFE YOU LOVE HER");
+	function processInput(input){
+		if(input.toLowerCase() === "b"){
+			apartmentEnding11();
+		}else{
+			stayHere();
+			waitThenCall(apartmentEnding10);
+		}
+	}
+	waitForInput(processInput);
+}
+function apartmentEnding11(){
+	clear();
+	print("\nBut there is no answer. How could there possibly be? In reality, all he's doing is pushing the same buttons he always has. Nothing has changed. The longer he spends here, the more invested he gets, the more he forgets which life is the real one.");
+	print("\n\tPLEASE PRESS 'Q' TO GO TO SLEEP.");
+	function processInput(input){
+		if(input.toLowerCase() === "q"){
+			apartmentEnding12();
+		}else{
+			stayHere();
+			waitThenCall(apartmentEnding11);
+		}
+	}
+	waitForInput(processInput);
+}
+function apartmentEnding12(){
+	clear();
+	print("\nAnd I'm trying to tell him this. That in this world he can never be anything but an observer. That as long as he remains here, he's slowly killing himself. But he won't listen to me. He won't stop. Here, watch this. Stanley, the next time the input asks you to enter a letter, do not do it.");
+	print("\n\tPLEASE PRESS 'P' TO BE AT WORK IN THE MORNING.");
+	function processInput(input){
+		if(input.toLowerCase() === "p"){
+			apartmentEnding13();
+	}else{
+		stayHere();
+		waitThenCall(apartmentEnding12);
+	}
+}
+waitForInput(processInput);
+}
+function apartmentEnding13(){
+	clear();
+	print("\nYou see? Can he just not hear me? How can I tell him in a way that he'll understand, that every second he remains here, he's electing to kill himself? How can I get him to see what I see? How can I get him to look at himself?");
+	print("\n\tPRESS 'D' TO QUESTION NOTHING.");
+	function processInput(input){
+		if(input.toLowerCase() === "d"){
+			apartmentEnding14();
+		}else{
+			stayHere();
+			waitThenCall(apartmentEnding13);
+		}
+	}
+	waitForInput(processInput);
+}
+function apartmentEnding14(){
+	clear();
+	print("\nI suppose I can't, not in the way I want him to. But I don't make the rules. I simply play to my intended purpose, the same as Stanley. We're not so different, I suppose. I'll try once more to conver all this to him. I'm compelled to, I must. Perhaps, well... naybe this time he'll see. Maybe this time.");
+	print("\n\tPLEASE DIE.");
+	function processInput(input){
+		apartmentEnding16();
+	}
+	waitForInput(processInput);
+}
+function apartmentEnding16(){
+	clear();
+	print("\nAnd I tried again, and Stanley pushed the button.");
+	function processInput(input){
+		apartmentEnding17();
+	}
+	waitForInput(processInput);
+}
+function apartmentEnding17(){
+	clear();
+	print("\nAnd I tried again, and Stanley pushed the button.");
+	function processInput(input){
+		apartmentEnding18();
+	}
+	waitForInput(processInput);
+}
+function apartmentEnding18(){
+	clear();
+	print("\nAnd I tri-");
+	function processInput(input){
+		apartmentFinal();
+	}
+	waitForInput(processInput);
+}
+function apartmentFinal(){
+	clear();
+	print("\ending 8, Apartment Ending");
+	function processInput(input){
+		intro();
+	}
+	waitForInput(processInput);
+}
 //very start. For this simple example, any input will bring you
 //to locationA
 function start(){
