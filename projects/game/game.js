@@ -1,13 +1,12 @@
 let gameActive = true; //this variable is required. 
                        //to stop the game, set it to false.
-let buttons = 0; //for the heavan ending
 let chance = 1; //for whiteboard and alt chat chances
-let babyButton = 0; //for the art ending
 let elevator = 0; // for the elevator/press confrence ending
 let restarts = 0; //for any endings that change based on resets
 let keypad = 0; //the communist manefesto (should probably add that at the end because that will take up a lot of space)
 let restart = 0; //yeah I need 2 of them... don't worry about it
 let lounge = 0; //for waiting in the employee lounge diouloge
+let TheEndIsNeverTheEnd = 0; //I'll let you figure out what this one does
 
 function reset(){
 	function processInput(input){
@@ -32,11 +31,14 @@ function percent(){
 //Make one function for each location
 function intro() {
     clear();
+	if(TheEndIsNeverTheEnd == 0){
     print("\nThis is a story about a Man named Stanely. Stanely worked for a company in a big building where he was employee #427. Employee #427's job was simple: he sat at his desk in room 427 and he pushed buttons on a keyboard. Orders came to him through a monitor on his desk, teling him what buttons to push, how long to push them, and in what order. This is what Employee #427 did every day of every month of every year, and although others might have considered it soul rending, Stanely relished every moment that the orders came in, as though he had been made exactly for this job. And Stanely was happy.");
-   percent();
+	}else{
+		print("\nthe end is never the end is never the end is never the end is never the end...");
+	}
+		percent();
 	elevator == 0;
 	keypad == 0;
-	babyButton == 0;
     function processInput(input){
     	room427();    
     }
@@ -48,7 +50,6 @@ function room427() {
     print("\nAnd then one day, something very peculiar happened, something that would forever change Stanley, something he would never quite forget. He had been at his deskk for nearly an hour, when he realized that not one, single order had arrived on the monitor for him to follow. No one had shown up to give him instructions, call a meeting, or even say hi. Never in all his years at the company had this happened, this complete isolation. Something was very clearly wrong. Shocked, frozen solid, Stanley found himself unable to  move for the longest time, but as he came to his wits and regained his senses, he got up from his desk and STEPPED OUT OF HIS OFFICE ");
     print("\nWhere do you want to go next? Say one of these choices:" +
         "\n\tHALLWAY" + "\n\tStay in office");
-    babyButton == 0;
 	elevator == 0;
 	keypad == 0;
 	lounge == 0;
@@ -1223,7 +1224,7 @@ function powerfulFinal(){
 function cargoLift(){
 	clear();
 	print("\nLook, Stanley, I think perhaps we've gotten off on the wrong fot here. I'm not your enemy, really, I'm not. I realize that investing your trust into someone else can be difficult but the fact is that the story has been about nothing but you all this time.");
-	print("\n\tstay on cargo lift" + "\n\tjump");
+	print("\n\tstay on cargo lift");
 	function processInput(input){
 		if(input.toLowerCase() === "stay on cargo lift"){
 			cargoLift2();
@@ -1518,12 +1519,492 @@ function apartmentFinal(){
 	}
 	waitForInput(processInput);
 }
+function choiceEnding1(){
+	clear();
+	print("\nAs Stanley picked up the phone, a white light engulfed him filling him not with radiance, but with hope. Hope for a life reunited once-");
+	print("\nWait... oh my goodness! Stanley did you just unplug the phone?");
+	function processInput(input){
+		choiceEnding2();
+	}
+	waitForInput(processInput);
+}
+function choiceEnding2(){
+	clear();
+	print("\nNo, that wasn't supposed to be a choice; how did you do that? You actually... chose incorrectly? I didn't even know that was possible. Let me dounble check... [rustling papers] No, it's definatly here, clear as day.");
+	function processInput(input){
+		choiceEnding3();
+	}
+	waitForInput(processInput);
+}
+function choiceEnding3(){
+	clear();
+	print("\nStanley picks up the phone, he's taken to his apartment where he finds his wife, and the two pledge themselves to one another. Music comes in, fade to white, roll credits. Not picking up the phone is actually somehow an incorrect course of action.");
+	function processInput(input){
+		choiceEnding4();
+	}
+	waitForInput(processInput);
+}
+function choiceEnding4(){
+	clear();
+	print("\nHow is that even possible? None of these decisions were supposed to mean anything! I don't understand. How on earth are you making meaningful choices? What, did you- Wait a second, did I just see...");
+	function processInput(input){
+		choiceEnding5();
+	}
+	waitForInput(processInput);
+}
+function choiceEnding5(){
+	clear();
+	print("\nNo, that's not possible. I can't believe it. How had I not noticed it sooner? You're not Stanley. You're a real person.");
+	function processInput(input){
+		choiceEnding6();
+	}
+	waitForInput(processInput);
+}
+function choiceEnding6(){
+	clear();
+	print("\n[sigh] I can't beliece I was so mistaken. This is why you've been able to make correct and incorrect choices! And to think I've been letting you run around in this game for so long. If you'd made any more wrong choices, you might have negated it entirely! It's as though you've completely ifnored even the most basic saftey proticol for real world decision-making!");
+	function processInput(input){
+		choiceEnding7();
+	}
+	waitForInput(processInput);
+}
+function choiceEnding7(){
+	clear();
+	print("\nOr did you not grasp the severity of the situation? Well I won't have that kind of risk on my watch. I'm going to stop the game for a moment so we can educate you properly on safe decision-making in the real world. Please observe this helpful instuctional transcript");
+	function processInput(input){
+		choiceEnding8();
+	}
+	waitForInput(processInput);
+}
+function choiceEnding8(){
+	clear();
+	print("\n[Choice! it's the best part of being a real person. But, if used incorrectly, can also be the most dangerous. For example, in thiis scenario, a hypotherical real person named Rupert has a choice. He could invent a machine that eliminates food shortages across the world to make life better for all people or he could spend years of hard work forgetting how to read.");
+	function processInput(input){
+		choiceEnding9();
+	}
+	waitForInput(processInput);
+}
+function choiceEnding9(){
+	clear();
+	print("\nWhich choice would you make? Rememver that unlike here, the real world makes sense and at no time should you make the choice that does not conform to rational logic. If you find yourself speaking with a person who does not make sense, in all likelihood, that person is not real.");
+	function processInput(input){
+		choiceEnding10();
+	}
+	waitForInput(processInput);
+}
+function choiceEnding10(){
+	clear();
+	print("\nAllow the person to fonosh their thought then provide an excuse why you cannot continue talking. Turn to a partner and practice saying:''My goodness. Is it 4:30? I am supposed to be having a back sack and crack.''");
+	function processInput(input){
+		choiceEnding11();
+	}
+	waitForInput(processInput);
+}
+function choiceEnding11(){
+	clear();
+	print("\nExellent. Making choices on a regular basis is the best part to a healthy decision-making process. Most medical professionals recommend making at least eight choices per day. Do you make more than eight? Less? And finally, if you begin to wonder if your choices are actually meaningful and whether you'll ever make a significant contribution to the world.");
+	function processInput(input){
+		choiceEnding12();
+	}
+	waitForInput(processInput);
+}
+function choiceEnding12(){
+	clear();
+	print("\nJust remember, that in the vast infiniteness of space, your thoughts and problems are materially insignificant and the feeling should subside. At this time, your instructor will guide you in an exercise to test and reinforce the marerial covered in this video.]");
+	function processInput(input){
+		choiceEnding13();
+	}
+	waitForInput(processInput);
+}
+function choiceEnding13(){
+	clear();
+	document.body.style.backgroundImage = "url('glitch3.png')";
+	print("\nAh, welcome back. You may hace noticed that this room has begun to deteriorate as a result of narrative contradiction. But not to worry. Now that you're properly informed on good decisions making we're going to revisit a choice you made just a few minutes ago, and see what the correct thing to do would've been. This way please.");
+	print("\n\tcargo lift");
+	function processInput(input){
+		if(input.toLowerCase() === "cargo lift"){
+			choiceEnding14();
+		}else{
+			stayHere();
+			waitThenCall(choiceEnding13);
+		}
+	}
+	waitForInput(processInput);
+}
+function choiceEnding14(){
+	clear();
+	document.body.style.backgroundImage = "url('glitchNone.png')";
+	print("\nNow that we know your choices are meaningful, we can't have you jumping off the platform and dying! Imagine the main character dying senselessly halfway through the story! That story would make no sense at all. We just need to get you home as soon as possible before the narrative contradiction gets any worse. Unfortunately, it seems this place is not well-equipt to deal with reality.");
+	print("\n\tcontinue to Employee Lounge");
+	function processInput(input){
+		if(input.toLowerCase() === "continue to employee lounge"){
+			choiceEnding15();
+		}else{
+			stayHere();
+			waitThenCall(choiceEnding14);
+		}
+	}
+	waitForInput(processInput);
+}
+function choiceEnding15(){
+	clear();
+	print("\nAlmost there! You'll take the door on the left, back to the correct ending. The story will have resolution once again, and you'll be home free in the real world!");
+	print("\n\tcontinue to the two doors");
+	function processInput(input){
+		if(input.toLowerCase() === "continue to the two doors"){
+			choiceEnding16();
+		}else{
+			stayHere();
+			waitThenCall(choiceEnding15);
+		}
+	}
+	waitForInput(processInput);
+}
+function choiceEnding16(){
+	clear();
+	document.body.style.backgroundImage = "url('glitchNone.png')";
+	print("\nNow remember, all you need to do is behave exactly as Stanley would. That means choosing responsibly and always putting the story first. I'm quite sure you'll be up to the task; just follow my lead and you'll be fine. Alright! When Stanley came to a set of two open doors, he entered the door on his left.");
+	print("\n\tleft door" + "\n\tright door");
+	function processInput(input){
+		if(input.toLowerCase() === "left door"){
+			choiceEnding17();
+		}else if(input.toLowerCase() === "right door"){
+			brokenchoice();
+		}else{
+			stayHere();
+			waitThenCall(choiceEnding16);
+		}
+	}
+	waitForInput(processInput);
+}
+function brokenchoice(){
+	clear();
+	document.body.style.backgroundImage = "url('glitch3.png')";
+	print("\nNo! Why did you do that? Quickly, hurry back in the other direction, perhaps we're not too late!");
+	print("\n\tgo back");
+	function processInput(input){
+		if(input.toLowerCase() === "go back"){
+			brokenChoice2();
+		}else{
+			stayHere();
+			waitThenCall(brokenchoice);
+		}
+	}
+	waitForInput(processInput);
+}
+function brokenChoice2(){
+	clear();
+	document.body.style.backgroundImage = "url('glitchNone.png')";
+	print("\n\tleft door" + "\n\tright door");
+	function processInput(input){
+		if(input.toLowerCase() === "left door"){
+			brokenChoice3();
+		}else if(input.toLowerCase() === "right door"){
+			brokenchoice();
+		}else{
+			stayHere();
+			waitThenCall(brokenChoice2);
+		}
+	}
+	waitForInput(processInput);
+}
+function brokenChoice3(){
+	clear();
+	document.body.style.backgroundImage = "url('glitch5.png')";
+	print("\nUgh! It's ruined! You- I can't believe after everything we talked about that you- My story! You've destroyed my work! Why? For what?! What did you get out of that? What did you think was so special about seeing the game undone?");
+	function processInput(input){
+		brokenChoice4();
+	}
+	waitForInput(processInput);
+}
+function brokenChoice4(){
+	clear();
+	print("\nLeft here like so much garbage, it- well, it's worthless now! And what am I supposed to do? Even if there were a way to continue, would it be worth it? To know that my story is now incorrect? How can I go back to that? I can't erase that knowledge.");
+	function processInput(input){
+		brokenChoice5();
+	}
+	waitForInput(processInput);
+}
+function brokenChoice5() {
+	clear();
+	print("\nAnd what am I supposed to do? Even if there were a way to continue, would it be worth it? To know that my story is now incorrect? How can I go back to that? I can't erase that knowledge. I'll have to live with it forever. Reliving its impossiblility forever. I couldn't live that way.");
+	function processInput(input){
+		brokenChoice6();
+	}
+	waitForInput(processInput);
+}
+function brokenChoice6(){
+	clear();
+	print("\nIs it bettere to shut the game down entirely? To willingly destroy all of my work? I don't know.... What's the answer? What do I do, what do I do, what do I-?");
+	function processInput(input){
+		brokenChoice7();
+	}
+	waitForInput(processInput);
+}
+function brokenChoice7(){
+	clear();
+	print("\nNo, I have to. I have to shut the game down. I have to. I Have to!");
+	function processInput(input){
+		brokenChoice8();
+	}
+	waitForInput(processInput);
+}
+function brokenChoice8(){
+	clear();
+	document.body.style.backgroundImage = "url('a.png')";
+	waitThenCall(brokenChoice9);
+}
+function brokenChoice9(){
+	document.body.style.backgroundImage = "url('glitch6.png')"
+	function processInput(input){
+		brokenChoice10();
+	}
+	waitForInput(processInput);
+}
+function brokenChoice10(){
+	print("\nWOOOAAAAHHHHH! I'm - I'm here.");
+	function processInput(input){
+		brokenChoice11();
+	}
+	waitForInput(processInput);
+}
+function brokenChoice11(){
+	clear();
+	print("\nI'm still here. Here in this pile of rubbish. With you. You, who thought you were so clever! Now look where we are. My entire game is destroyed.");
+	function processInput(input){
+		brokenChoice12();
+	}
+	waitForInput(processInput);
+}
+function brokenChoice12(){
+	clear();
+	print("\nIt was the only thing in the world that was mine, and you've run it into the ground. What, did you think that would be funny? You just had to see it? Didn't I impress upon you how important it was to be like Stanley? He actually knows how to do what I tell him to do.");
+	function processInput(input){
+		brokenChoice13();
+	}
+	waitForInput(processInput);
+}
+function brokenChoice13(){
+	clear();
+	print("\nHe understands that if I say to do something, there's a damn good reason for it! That thought hadn't even occured to you, had it? That there's a word outside of you? You're a child.");
+	function processInput(input){
+		brokenChoice14();
+	}
+	waitForInput(processInput);
+}
+function brokenChoice14(){
+	clear();
+	print("\n[sigh] Ohhh, my story. If you'd just gone through the door on the left you would hace seen it. There was a whole underground facility. You would have destroyed it and been victorious. It would have been so perfect! I worked so hard on it! I tried so hard to make-");
+		function processInput(input){
+			brokenChoice15();
+		}
+		waitForInput(processInput);
+}
+function brokenChoice15(){
+	clear();
+	document.body.style.backgroundImage = "url('a.png')";
+	waitThenCall(brokenChoice16);
+}
+function brokenChoice16(){
+	clear();
+	document.body.style.backgroundImage = "url('glitchNone.png')";
+	print("...is behave exactly as Stanley would. That means choosing responsibly and always putting the story first. I'm quite sure you'll be up to the task; just follow my lead and you'll be fine. Alright! When Stanley came to a set of two open doors, he entered the door on his left.");
+	print("\n\tleft door" + "\n\tright door");
+	function processInput(input){
+		if(input.toLowerCase() === "left door"){
+			choiceEnding17();
+		}else if(input.toLowerCase() === "right door"){
+			brokenChoice15();
+		}else{
+			stayHere();
+			waitThenCall(brokenChoice16);
+		}
+	}
+	waitForInput(processInput);
+}
+function choiceEnding17(){
+	clear();
+	print("\nYet there was not a single person here either. Feeling a wave of disbelief, Stanley decided to go up to his boss's office hoping he might find an answer there.");
+	print("\n\tcontinue");
+	function processInput(input){
+		if(input.toLowerCase() === "continue"){
+			choiceEnding18();
+		}else{
+			stayHere();
+			waitThenCall(choiceEnding17);
+		}
+	}
+	waitForInput(processInput);
+}
+function choiceEnding18(){
+	clear();
+	document.body.style.backgroundImage = "url('glitch3.png')";
+	print("\nComing to a staircase, Stanley walked upstairs to his boss's office.");
+	print("\n\tupstairs");
+	function processInput(input){
+		if(input.toLowerCase() === "upstairs"){
+			choiceEnding18();
+		}else{
+			stayHere();
+			waitThenCall(choiceEnding18);
+		}
+	}
+	waitForInput(processInput);
+}
+function choiceEnding18(){
+	clear()
+	document.body.style.backgroundImage = "url('glitch4.png')";
+	print("Stepping inside his manager's office, Stanley was once again stunned to discover not an indication of any human life. Shocked, unraveled, Stanley wondered in disbelief who orchestrated this until he saw the door with a voice reciever next to it.");
+	function processInput(input){
+		choiceEnding19();
+	}
+	waitForInput(processInput);
+}
+function choiceEnding19(){
+	clear();
+	document.body.style.backgroundImage = "url('glitch5.png')";
+	print("\nSurely behind this door lay all the answers to his questions. And beyond all probability, he knew the pascode. He had seen it on his boss's computer just last week. ''NIGHT SHARK 1 - 1- 5.");
+	function processInput(input){
+		choiceEnding20();
+	}
+	waitForInput(processInput);
+}
+function choiceEnding20(){
+	clear();
+	print("\nWas this the code to open the door? Would it still work? There was only one way to find out. Stanley had been trained to never speak up. But now he would draw from within himself the courage to face the unknown. He drew in a sharp breath, and then spoke the code.");
+	function processInput(input){
+		choiceEnding21();
+	}
+	waitForInput(processInput);
+}
+function choiceEnding21(){
+	clear();
+	print("\nStanley spoke the code: ''NIGHT SHARK 1 - 1 - 5.");
+	function processInput(input){
+		choiceEnding22();
+	}
+	waitForInput(processInput);
+}
+function choiceEnding22(){
+	clear();
+	print("\nHe spoke it into the receiver right there on the wall.");
+	function processInput(input){
+		choiceEnding23();
+	}
+	waitForInput(processInput);
+}
+function choiceEnding23(){
+	clear();
+	print("\nI'm sorry, is there a problem? You didn't mishear me, did you? Please, speak the code into the receiver, otherwise we can't get on with the story. This is a crucial step.");
+	function processInput(input){
+		choiceEnding24();
+	}
+	waitForInput(processInput);
+}
+function choiceEnding24(){
+	clear();
+	print("\nOkay. Fine. You're not going to fo it. But you know what? It's pretty humiliating to bring you this far only for you to suddenly decide you have better things to do. I asked you for this one single thing - for your respect; the kind of respect Stanley shows for his choices.");
+	function processInput(input){
+		choiceEnding25();
+	}
+	waitForInput(processInput);
+}
+function choiceEnding25(){
+	clear();
+	print("\nHe knows what it means to take a story seriously. If you didn't want to see what I had to show you, then why did you come here? You had a choice, you know. You could have gone through the door on the right! You coulf have fone whatever the hell you wanted over there! Why did you come this way? Speak! Say something to me! Explain yourseld! You coward! You-");
+	function processInput(input){
+		credits1();
+	}
+	waitForInput(processInput);
+}
+function credits1(){
+	clear();
+	document.body.style.backgroundImage = "url('a.png')";
+	waitThenCall(credits2);
+}
+function credits2(){
+	document.body.style.backgroundImage = "url('gradient.png')";
+	print("\n\t[When Stanley came to a set of two open doors, he entered the door on his left.]");
+	function processInput(input){
+		credits3();
+	}
+	waitForInput(processInput);
+}
+function credits3(){
+	clear();
+	print("\n\t[Stanley? Hello? Are you... is everything okay?]");
+	function processInput(input){
+		credits5();
+	}
+	waitForInput(processInput);
+}
+function credits5(){
+	clear();
+	print("\nThe End!");
+	print("\n\t[Stanley, please... I... I need you to make a choice. I need you to walk through a door.]");
+	function processInput(input){
+		credits6();
+	}
+	waitForInput(processInput);
+}
+function credits6(){
+	clear();
+	print("\nThank you for playing The Stanley Parable");
+	print("\n\t[Are you listening to me? Can you hear me? Is everything alright?]");
+	function processInput(input){
+		credits7();
+	}
+	waitForInput(processInput);
+}
+function credits7(){
+	clear();
+	print("\nCREDITS");
+	print("\nWritten and designed by Davey Wrenden and William Pugh");
+	print("\n\t[Stanley, this is important. The story needs you. It needs you to make a decision. It cannot exist without you. Do you understand me?]");
+	print("\nNarrated by Kevan Brightinh");
+	print("\nAdditional Level Design: Collin Eddings, Jack Parsons");
+	print("\nPrograming: Jesus Higueras");
+	print("\n\t[Whatever choice you make is just fine, they are both correct; you cannot be wrong here. WE can work together; I'll accept whatever you do. I simply need you to take that step forward. Please? Choose?]");
+	print("\nModeling: Andreas Jorgensen");
+	print("\nSound Design: Robin Arnott, Eduardo Ortiz");
+	print("\nOrigional Music: Blake Robinson, Yiannis Ioannised, Christiaan Bakker.");
+	print("\n\t[Do something! Anything. This is more important than you can ever know. I need this. The story needs it.");
+	print("\nAdditional Voicework: Lesley Staples, Aviva Pinchas, Jenny Kuglin");
+	print("\nAdditional music: ''The Floatubg World'' from Pillars of Light by Siddhartha Barhnoorn, ''Who Likes to Party'' by Kevin Macleod, ''The Elevator Bossa Nova'' by www.bensound.com");
+	print("\nStanley character skin: Taggert, Dean Darko");
+	print("\nOrigional Artwork: Mikka Lahti, Simon Boxer");
+	print("\nAnimation: Ry Soderberg, Maxime Lebled");
+	print("\n\t[So, you can hear me? Are you there? Are you listening to this? Stanley, are you there?!]");
+	print("\nWebmaster: Shane Sweeney");
+	print("\nValve Support Team: Anna Sweet, Mike Dunkle, Kassidy Gerber, Jason Ruymen, Pieter Wycoff");
+	print("\nAdditional Art Assets: Valve");
+	print("\n\t[I... okay... it's okay, I can wait. You need time to decide, time to make sure your choice is correct. That is the best choice.");
+	print("\nMade in Source by Valve");
+	print("\nThe Stanley Parable uses Havok Physics. Copywright 1999-2011 Havok.com Inc. (and its Licensors). All Rights Reserved. See www.havoc.com for details");
+	print("\nthis game was made by Galactic Cafe");
+	print("\n\t[Thats alright. I'll wait for you to decide what is the right thing to do. Take as much time as you need.]");
+	function processInput(input){
+		choiceFinal();
+	}
+	waitForInput(processInput);
+}
+function choiceFinal(){
+	clear();
+	document.body.style.backgroundImage = "url('a.png')";
+	TheEndIsNeverTheEnd = TheEndIsNeverTheEnd + 1;
+	print("\nEnding 9, Choice Ending");
+	function processInput(input){
+		intro();
+	}
+	waitForInput(processInput);
+}
 //very start. For this simple example, any input will bring you
 //to locationA
 function start(){
-    print("Welcome to a recreation of The Stanely Parrables! Press any key to start. you can reset the game at any time by typing reset.");
-	print("\nSome endings are missing, like the escape pod ending becuase I can't program that in, or the museumn ending because I didn't want to. Also, some diologue has been changed to fit the format, like in the insane ending.");
+    print("Welcome to a recreation of The Stanely Parrables! Press any key to start.");
+	print("\nSome endings are missing, like the escape pod ending becuase I can't program that in, or the museumn ending because I didn't want to, or a good chunck of the right door endings because I wasn't able to make them in time");
 	print("\nall copywrite goes to CrowsCrowsCrows and I am in no way trying to claim any of this work as mine, I'm just making this for a web page assignment");
+	document.body.style.backgroundImage = "url('glitchNone.png')";
     function processInput(input){
             intro();
     }
