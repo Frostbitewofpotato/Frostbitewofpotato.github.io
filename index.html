@@ -1,49 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<script src="js/validate.js"></script>
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=MuseoModerno:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-		<title>Index</title>
-<link rel="icon" type="image/x-icon" href="favicon.ico">
-		<style>
-body {font-family: "MuseoModerno", sans-serif;}
+<title>Lexi Kalish Portfolio</title>
+</head>
+<style>
 body{
-	background-color: rgb(253, 219, 101);
+background-image: url('portfolio/TempBack.png');
+}
+.button{
+background-color: #efe1a7;
+border: none;
+}
+.grid{
+display: grid;
+height: 100vh;
+grid:
+	'head head head' .5fr
+	'side1 main side2' 5fr
+	'footsies footsies footsies' 1fr
+/1fr 8fr 1fr;
+}
+.grippers{
+display: grid;
+height:15vh;
+grid:
+	'a a b' 1fr
+/1fr 1fr 1fr;
+}
+#contact{
+grid-area: a;
+}
+#reff{
+grid-area: b;
+}
+#cabbage{
+grid-area: head;
+width: 100%;
+Height: 100%;
+background-color: #e4bf45;
+}
+#left{
+grid-area: side1;
+}
+#body{
+grid-area: main;
+background-color: #efe1a7;
+}
+#notLeft{
+grid-area: side2;
+}
+#footFingies{
+grid-area: footsies;
+background-color: #e4bf45;
 }
 </style>
 </head>
 <body>
-<p>*12 hours of mocrowave*</p>
-<h1>mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm</h1>
-<img src="practice/E_G_G.jpeg" alt="E G G" usemap="#egg">
-<map name="egg">
-	<area shape="circle" title="He's fine" coords="94,89,10" href="https://beesbeesbeesbees.com/" alt="He's fine"> 
-</map>
-<img src="practice/Images/CAT_B.jpg" alt="my baby, my beloved stinky"
-			   srcset= "practice/Images/CAT_B.jpg 1024w,
-				    practice/Images/CAT_M.jpg 640w,
-				    practice/Images/CAT_S.jpg 320w"
->
-<!--Image by yours truely-->
-<pre>
-<blockquote>
-	and the universe said I love you
-	and the universe said you have played the game well
-	and the universe said everything you need is within you
-	and the universe said you are stronger than you know
-	and the universe said you are the daylight
-	and the universe said you are the night
-	and the universe said the darkness you fight is within you
-	and the universe said the light you seek is within you
-	and the universe said you are not alone
-	and the universe said you are not separate from every other thing
-	and the universe said you are not separate from every other thing
-	and the universe said you are the universe tasking itself, talking to itself, reading its own code
-	and the universe said I live you because you are love
-	</blockquote>
-		<p> -The Minecraft End Poem </p>
-</pre>
+<div class = "grid">
+	<div id = "cabbage">
+		<p>-  Lexi Kalish 
+		<button class="button"> HOME </button>
+                <button class="button"> AWARDS </button>
+                <button class="button"> SKILLS </button>
+                <button class="button"> EXPERIENCES </button>
+                <button class="button"> RESUME </button> 
+		</p>
+		</div>
+	<div id = "body">
+		</div>
+	<div id= "footFingies">
+		<div class = "grippers">
+			<div id = "contact">
+				<p><a href="mailto:frostbitewofpotato@gmail.com">frostbitewofpotato@gmail.com</a></p>
+				<p><a href="tel:+13606744804">360-674-4804</a></p>	
+		</div>
+			<div id = "reff">
+			</div>
+		</div>
+	</div>
+</div>
 </body>
 </html>
