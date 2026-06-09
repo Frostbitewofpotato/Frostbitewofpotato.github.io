@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Lexi Kalish Portfolio</title>
+</head>
+<style>
+body{
+background-image: url('TempBack.png');
+}
+.button{
+background-color: #efe1a7;
+border: none;
+}
+.grid{
+display: grid;
+height: 100vh;
+grid:
+	'head head head' .5fr
+	'side1 main side2' 5fr
+	'footsies footsies footsies' 1fr
+/1fr 8fr 1fr;
+}
+#drugs{
+grid-area: head;
+width: 100%;
+Height: 100%;
+background-color: #e4bf45;
+}
+#left{
+grid-area: side1;
+}
+#body{
+grid-area: main;
+background-color: #efe1a7;
+}
+#notLeft{
+grid-area: side2;
+}
+#footFingies{
+grid-area: footsies;
+background-color: #e4bf45;
+}
+</style>
+</head>
+<body>
+<div class = "grid">
+	<div id = "drugs">
+		<p>-  Lexi Kalish 
+		<button class="button"> HOME </button>
+                <button class="button"> AWARDS </button>
+                <button class="button"> SKILLS </button>
+                <button class="button"> EXPERIENCES </button>
+                <button class="button"> RESUME </button> 
+		</p>
+		</div>
+	<div id = "body">
+		</div>
+	<div id= "footFingies">
+	</div>
+</div>
+</body>
+</html>
