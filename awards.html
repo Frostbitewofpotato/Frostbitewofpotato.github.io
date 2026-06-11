@@ -21,28 +21,50 @@ border: none;
 display: grid;
 height: 100vh;
 grid:
-	'head head head' .5fr
-	'side1 main side2' 5fr
-	'footsies footsies footsies' 1fr
+	'head head head' 50px
+	'side1 main side2' 800px
+	'footsies footsies footsies' 100px
 /1fr 8fr 1fr;
 }
-.apendix{
+.body{
+grid-area: main;
+background-color: #dde0df;
+}
+.pancreous{
 display: grid;
 height: 75vh;
 grid:
-	'awards' 1fr
-	'leadership' 1fr
-	'certifications' 1fr
-/1fr;
+	'awards photoa' 1fr
+	'photob leadership' 1fr
+	'certifications photoc' 1fr
+/1fr 1fr;
 }
 #award{
 grid-area: awards;
+font-size: 13px;
+margin-left: 10px;
+margin-top: 20px;
+}
+#photo1{
+grid-area: photoa;
+}
+#photo2{
+grid-area: photob;
 }
 #leaderships{
 grid-area: leadership;
+font-size: 13px;
+margin-left: 10px;
+margin-top: 20px;
 }
 #certification{
 grid-area: certifications;
+font-size: 13px;
+margin-left: 10px;
+margin-top: 20px;
+}
+#photo3{
+grid-area: photoc;
 }
 .grippers{
 display: grid;
@@ -80,10 +102,6 @@ padding-left: 10px;
 }
 #left{
 grid-area: side1;
-}
-#body{
-grid-area: main;
-background-color: #dde0df;
 }
 #notLeft{
 grid-area: side2;
@@ -126,19 +144,37 @@ function randomSite() {
                 <button class="button"> RESUME </button> 
 		</p>
 		</div>
-	<div id = "body">
-		<div class="appendix">
+<div class="body">
+		<div class="pancreous">
 			<div id="award">
-				<p>
-a
-				</p>
+				<h3>Awards</h3>
+				<p>- SkillsUSA 2nd place state champion in broadcast television</p>
+				<p>- Arlington Student Film Fest official selection for 3 years</p>
+				<p>- Student of the Semester for 9th and 10th grade</p>
+			</div>
+			<div id="photo1">
+				<p><img src="awards.png" alt="photo of the skillsUSA 2nd place team for broadcast news 2025" height="250x"></p>
+			</div>
+			<div id="photo2">
+				<p><img src="leadership.jpeg" alt="dnd club at the Virginia Renasance fair" height="250px"></p>
 			</div>
 			<div id="leaderships">
+				<h3>Leadership</h3>
+				<p>- Social Media Maneger of ACC's NHS 2025-2026</p>
+				<p>- Member of the DnD Council for 3+ years</p>
+				<p>- co-founder of the Arena Theater Club</p>
 			</div>
 			<div id="certification">
+				<h3>Certifications</h3>
+				<p>- NOCTI Television Procuction SkillBadge</p>
+				<p>- Adobe Animate Certification</p>
+				<p>- Adobe Premear Pro 2024 Certification</p>
+			</div>
+			<div id="photo3">
+				<p><img src="certification.png" alt="adobe premear certification" height="150px">
 			</div>
 		</div>
-		</div>
+</div>
 	<div id= "footFingies">
 		<div class = "grippers">
 			<div id = "contact">
