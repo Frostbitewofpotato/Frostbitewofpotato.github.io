@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Lexi Kalish Portfolio</title>
+</head>
+<style>
+body{
+font-family:verdana;
+background-image: url('Back1.png');
+height:100px;
+background-position: center;
+background-repeat: no-repeat;
+background-size: fill;
+}
+.button{
+background-color: #e2eaeb;
+color:#646f9b;
+border: none;
+}
+.grid{
+display: grid;
+height: 100vh;
+grid:
+	'head head head' .5fr
+	'side1 main side2' 5fr
+	'footsies footsies footsies' 1fr
+/1fr 8fr 1fr;
+}
+.apendix{
+display: grid;
+height: 75vh;
+grid:
+	'awards' 1fr
+	'leadership' 1fr
+	'certifications' 1fr
+/1fr;
+}
+#award{
+grid-area: awards;
+}
+#leaderships{
+grid-area: leadership;
+}
+#certification{
+grid-area: certifications;
+}
+.grippers{
+display: grid;
+height:15vh;
+grid:
+	'a b c' 1fr
+/1fr 1fr .5fr;
+color:#f2f0eb;
+}
+#contact{
+grid-area: a;
+padding-left: 10px;
+}
+#reff{
+grid-area: b;
+font-size: 13px;
+line-height: 2px;
+}
+#random{
+grid-area: c;
+padding-left: 10px;
+padding-right: 10px;
+font-size: 13px;
+}
+.a {
+color: #bb4a4d;
+}
+#cabbage{
+grid-area: head;
+width: 100%;
+Height: 100%;
+background-color: #aeb2b5;
+color: #f2f0eb;
+padding-left: 10px;
+}
+#left{
+grid-area: side1;
+}
+#body{
+grid-area: main;
+background-color: #dde0df;
+}
+#notLeft{
+grid-area: side2;
+}
+#footFingies{
+grid-area: footsies;
+background-color: #aeb2b5;
+}
+</style>
+<script>
+function randomSite() {
+	var urls = new Array();
+	urls[0] = "https://beesbeesbessbees.com/";
+	urls[1] = "https://spritacular.org/";
+	urls[2] = "https://jeffgoldblumle.com/";
+	urls[3] = "http://endless.horse/";
+	urls[4] = "https://web.archive.org/";
+	urls[5] = "https://screamintothevoid.com/";
+	urls[6] = "https://www.decisionproblem.com/paperclips/";
+	urls[7] = "https://www.loveandlemons.com/soup-recipes/";
+	urls[8] = "https://www.youtube.com/watch?v=PdYLRTGmQ3c";
+	urls[9] = "https://www.thetruesize.com/";
+	urls[10] = "https://radio.garden/";
+	urls[11] = "https://findtheinvisiblecow.com/";
+	urls[12] = "https://zoom.earth/";
+	urls[13] = "https://libraryofbabel.info/";
+	var random = Math.floor(Math.random()*urls.length);
+	window.location = urls[random];
+}
+</script>
+</head>
+<body>
+<div class = "grid">
+	<div id = "cabbage">
+		<p>  Lexi Kalish 
+		<button class="button"> HOME </button>
+                <button class="button"> AWARDS </button>
+                <button class="button"> SKILLS </button>
+                <button class="button"> EXPERIENCES </button>
+                <button class="button"> RESUME </button> 
+		</p>
+		</div>
+	<div id = "body">
+		<div class="appendix">
+			<div id="award">
+				<p>
+a
+				</p>
+			</div>
+			<div id="leaderships">
+			</div>
+			<div id="certification">
+			</div>
+		</div>
+		</div>
+	<div id= "footFingies">
+		<div class = "grippers">
+			<div id = "contact">
+				<p><a class="a" href="mailto:frostbitewofpotato@gmail.com">frostbitewofpotato@gmail.com</a></p>
+				<p><a class="a" href="tel:+13606744804">360-674-4804</a></p>	
+		</div>
+			<div id = "reff">
+				<p>Refrences</p>
+				<p><img src="DRTHOMASMYPOOKIE.jpeg" alt="Dr. Thomas" width="25px" height="25px"> Dr. Miriam Thomas <a class="a" href="mailto:miriam.thomas@apsva.us">miriam.thomas@apsva.us</a><p>
+				<p> person 2</p>
+			</div>
+			<div id = "random">
+				<p>click for random fun site</p>
+				<button class="button" onclick="randomSite()"> Random </button>
+			</div>
+		</div>
+	</div>
+</div>
+</body>
+</html>
