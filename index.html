@@ -17,14 +17,42 @@ background-color: #e2eaeb;
 color:#646f9b;
 border: none;
 }
+.butwo{
+background-color:#646f9b;
+color:#e2eaeb;
+border: none;
+height: 30px;
+width: 85px;
+}
+.center{
+	display: block;
+	margin: auto;
+	height: 50%;	
+}
 .grid{
 display: grid;
 height: 100vh;
 grid:
 	'head head head' .5fr
-	'side1 main side2' 5fr
+	'sidea main sideb' 5fr
 	'footsies footsies footsies' 1fr
 /1fr 8fr 1fr;
+}
+.pancreous{
+display: grid;
+height: 75vh;
+grid:
+	'photo title' 1fr 
+/1fr 2fr;
+color: #404466;
+}
+#pic{
+grid-area: photo;
+}
+#name{
+grid-area: title;
+padding-top: 100px;
+padding-left: 20px;
 }
 .grippers{
 display: grid;
@@ -61,14 +89,14 @@ color: #f2f0eb;
 padding-left: 10px;
 }
 #left{
-grid-area: side1;
+grid-area: sidea;
 }
 #body{
 grid-area: main;
 background-color: #dde0df;
 }
 #notLeft{
-grid-area: side2;
+grid-area: sideb;
 }
 #footFingies{
 grid-area: footsies;
@@ -109,7 +137,22 @@ function randomSite() {
 		</p>
 		</div>
 	<div id = "body">
-		</div>
+		<div class = "pancreous">
+			<div id="pic">
+			<p>	<img style="margin-left: 10px; margin-top: 50px;" src="Photo.jpg" alt="Photo of Lexi Kalish" height="400px">
+			</p>
+			</div>
+			<div id="name">
+				<h1>Lexi Kalish</h1>
+				<h4>Student, Graphic Designer, Character Designer</h4>
+				<p><button class="butwo">Awards</button></p
+> 
+				<p><button class="butwo">Skills</button></p> 
+				<p><button class="butwo">Experiences</button></p>
+				<p><button class="butwo">Resume</button></p>
+			</div>
+		</div>	
+	</div>
 	<div id= "footFingies">
 		<div class = "grippers">
 			<div id = "contact">
