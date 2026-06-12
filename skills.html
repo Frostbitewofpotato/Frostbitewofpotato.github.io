@@ -21,10 +21,39 @@ border: none;
 display: grid;
 height: 100vh;
 grid:
-	'head head head' .5fr
-	'side1 main side2' 5fr
-	'footsies footsies footsies' 1fr
+	'head head head' 50px
+	'side1 main side2' 900px
+	'footsies footsies footsies' 120px
 /1fr 8fr 1fr;
+}
+.pancreous{
+display: grid;
+height: 100vh;
+grid:
+	'imga vm' 1fr
+	'ql ingb' 1fr
+	'imgc le' 1fr
+/1fr 1fr;
+margin-left: 10px;
+}
+#image1{
+grid-area: imga;
+}
+#visualMedia{
+grid-area: vm;
+}
+#quickLearning{
+grid-area: ql;
+}
+#image2{
+grid-area: ingb;
+}
+#image3{
+grid-area: imgc;
+margin-left: 100px;
+}
+#labExperience{
+grid-area: le;
 }
 .grippers{
 display: grid;
@@ -109,7 +138,30 @@ function randomSite() {
 		</p>
 		</div>
 	<div id = "body">
+		<div class="pancreous">
+			<div id="image1">
+			<p><img src="art.PNG" alt="Aromantic, Asexual, and Aroace dragons" height="250px"></p>
+			</div>
+			<div id="visualMedia">
+				<h3>Digital Art</h3>
+				<p> The ability to express complex concepts in easy to understand media. My specialties include creature design, concept art, badge design, and to a lesser extend style matching. More examples of my work can be found <a href="https://acggoods.com/store/chair-productions-inc" class="a">here</a> and <a class="a" href="https://frostbite-portfolio.carrd.co/#">here</a>.</p>
+			</div>
+			<div id="quickLearning">
+			<h3>Web Dev</h3>
+			<p>The ability to create a visually appealing and functional website. This website is an example of this ability.</p?\>
+			</div>
+			<div id="image2">
+			<p><img src="webDev.png" alt="image of the homepage of this website" height="250px"></p>
+			</div>
+			<div id="image3">
+			<p><img src="Orginization.png" alt="NHS stream cleanup group photo, image not taken by me" height="265px"></p>
+			</div>
+			<div id="labExperience">
+				<h3>Orginization</h3>
+				<p> The ability to orginize events for both small and large groups of people. I've helped orginize an NHS stream cleanup, the DnD Club's trip to the renfair, as well as several personal gatherings</p>
+			</div>
 		</div>
+	</div>
 	<div id= "footFingies">
 		<div class = "grippers">
 			<div id = "contact">
